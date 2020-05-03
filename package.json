@@ -1,0 +1,24 @@
+{
+  "name": "bbqcss",
+  "version": "1.0.0",
+  "description": "Lightweight CSS library with Modular Scale and Picnic",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt-antone/bbqcss.git"
+  },
+  "keywords": [
+    "CSS",
+    "Modularscale",
+    "Picnic"
+  ],
+  "author": "Matt Antone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matt-antone/bbqcss/issues"
+  },
+  "homepage": "https://github.com/matt-antone/bbqcss#readme"
+}

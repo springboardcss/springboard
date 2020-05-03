@@ -1,0 +1,28 @@
+// Inherit from the class
+@import 'class';
+
+
+// For the toggle buttons
+:checked + .toggle,
+:checked + .toggle:hover {
+  box-shadow: $bbq-button-click;
+}
+
+// Hide the checkbox/radiobutton
+// Handle with care
+[type] + .toggle {
+  padding: $bbq-button-padding;
+  margin-right: 0;
+
+  &:after,
+  &:before {
+    display: none;
+  }
+}
+
+// Implement the abstract class for real elements
+button,
+.button,
+[type=submit] {
+  @extend %button;
+}

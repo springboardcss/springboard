@@ -1,0 +1,38 @@
+// Top level variables for Picnic CSS
+// Note: some others are available under each specific plugin
+
+@import 'colors';
+
+
+// Colors (from /themes/default/colors)
+$bbq-white: #fff;
+$bbq-black: #111;
+$bbq-primary: darken($green, 5%) !default;
+$bbq-success: $blue !default;
+$bbq-warning: $orange !default;
+$bbq-error: $red !default;
+$bbq-dull: $gray !default;
+$bbq-color-variation: 10% !default;
+$bbq-transparency: .1 !default;
+
+
+// Spaces
+$bbq-separation: .6em !default;
+$bbq-breakpoint: 60em !default;
+
+
+// Shapes
+$bbq-radius: 0 !default;
+$bbq-border: 1px solid #ddd !default;
+$bbq-shadow: none !default;
+
+
+// Transitions
+$bbq-transition: all .2s ease !default;
+
+
+
+
+
+// Plugins
+$bbq-nav-position: absolute !default;

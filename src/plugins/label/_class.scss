@@ -1,0 +1,43 @@
+// Label of text
+$bbq-label-padding: calc(#{$bbq-separation} / 2) calc(#{$bbq-separation} * 1.5 ) !default;
+$bbq-label-radius: $bbq-radius !default;
+
+// Styles
+%label {
+  display: inline-block;
+  text-align: center;
+  letter-spacing: inherit;
+  margin: 0;
+  padding: $bbq-label-padding;
+  vertical-align: middle;
+  background: $bbq-primary;
+  color: $bbq-white;
+  border: 0;
+  border-radius: $bbq-label-radius;
+  width: auto;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  // Colors
+  &.success {
+    background: $bbq-success;
+  }
+
+  &.warning {
+    background: $bbq-warning;
+  }
+
+  &.error {
+    background: $bbq-error;
+  }
+
+  &.pseudo {
+    background-color: transparent;
+    color: inherit;
+  }
+}
