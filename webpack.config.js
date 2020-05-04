@@ -12,7 +12,7 @@ module.exports = env => {
 
   return {
     entry: {
-      bbq: './src/sass/index.scss',
+      'springboard-css': './src/sass/index.scss',
     },
     output: {
       path: path.resolve(__dirname, 'dist'),

@@ -1,7 +1,7 @@
 {
   "name": "springboard-css",
   "version": "1.0.0",
-  "description": "Hugo BBQ",
+  "description": "Springboard CSS",
   "main": "index.js",
   "scripts": {
     "start": "webpack -w --mode=development --env.NODE_ENV=development",
