@@ -7,14 +7,15 @@ module.exports = env => {
 
   const style = env.NODE_ENV === 'production' ? 'compressed' : 'expanded'
   const ext = env.NODE_ENV === 'production' ? '.min.css' : '.css'
-  // const path = env.NODE_ENV === 'production' ? 'static/assets/' : ''
+  const target = env.NODE_ENV === 'production' ? 'dist' : 'dev'
+
 
   return {
     entry: {
       bbq: './src/sass/index.scss',
     },
     output: {
-      path: path.resolve(__dirname, 'static/assets/'),
+      path: path.resolve(__dirname, 'dist'),
     },
     module: {
       rules: [
@@ -40,10 +41,8 @@ module.exports = env => {
     plugins: [
       new FixStyleOnlyEntriesPlugin(),
       new MiniCssExtractPlugin({
-        // Options similar to the same options in webpackOptions.output
-        // both options are optional
-        filename: `css/[name]${ext}`,
-        chunkFilename: `css/[id]${ext}`,
+        filename: `[name]${ext}`,
+        chunkFilename: `[id]${ext}`,
       }),
     ],
   }

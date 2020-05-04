@@ -1,0 +1,25 @@
+
+// Variables
+$bbq-input-height: 2.1em !default;
+$bbq-input-padding: calc(#{$bbq-separation} / 2) #{$bbq-separation} !default;
+$bbq-input-background: #fff !default;
+
+
+
+// Top level selector
+%input {
+  line-height: 1.5;
+  margin: 0;
+  height: $bbq-input-height;
+  padding: $bbq-input-padding;
+  border: $bbq-border;
+  background-color: $bbq-input-background;
+  border-radius: $bbq-radius;
+  transition: $bbq-transition;
+  width: 100%;
+
+  &:focus {
+    border: 1px solid $bbq-primary;
+    outline: 0;
+  }
+}

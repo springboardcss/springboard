@@ -1,25 +1,28 @@
 {
-  "name": "bbq-hugo-theme",
+  "name": "springboard-css",
   "version": "1.0.0",
   "description": "Hugo BBQ",
   "main": "index.js",
   "scripts": {
     "start": "webpack -w --mode=development --env.NODE_ENV=development",
-    "build": "webpack -w --mode=development --env.NODE_ENV=production",
-    "push": "git add . && git commit -m 'update from dev' && git push",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode=development --env.NODE_ENV=production && webpack --mode=development --env.NODE_ENV=development",
+    "push": "git add . && git commit -m 'update from dev' && git push"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbqcss/bbq-hugo-theme.git"
+    "url": "git+https://github.com/springboardcss/springboard.git"
   },
   "author": "Matthew Antone",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bbqcss/bbq-hugo-theme/issues"
+    "url": "https://github.com/springboardcss/springboard/issues"
   },
-  "homepage": "https://github.com/bbqcss/bbq-hugo-theme#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/springboardcss/springboard#readme",
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001050",
+    "chokidar": "^3.4.0",
+    "core-js": "^3.6.5"
+  },
   "devDependencies": {
     "autoprefixer": "^9.7.6",
     "css-loader": "^3.5.3",

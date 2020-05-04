@@ -1,0 +1,162 @@
+@import 'class';
+
+$bbq-grid-gutter: #{$bbq-separation} !default;
+$bbq-grid-gutter-vertical: $bbq-grid-gutter !default;
+$bbq-grid-gutter-horizontal: $bbq-grid-gutter !default;
+
+$bbq-grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 !default;
+$bbq-grid-children: $bbq-grid-sizes !default;
+$bbq-grid-off: $bbq-grid-sizes !default;
+
+$bbq-grid-count: one two three four five six seven eight nine ten eleven twelve !default;
+$bbq-grid-count-sizes: (
+  one: 100%,
+  two: 50%,
+  three: 33.33333%,
+  four: 25%,
+  five: 20%,
+  six: 16.66666%,
+  seven: 14.28571%,
+  eight: 12.5%,
+  nine: 11.11111%,
+  ten: 10%,
+  eleven: 9.09091%,
+  twelve: 8.33333%
+);
+$bbq-grid-part: full half third two-third fourth three-fourth fifth two-fifth three-fifth four-fifth sixth !default;
+$bbq-grid-part-sizes: (
+  full: 100%,
+  half: 50%,
+  third: 33.33333%,
+  two-third: 66.66666%,
+  fourth: 25%,
+  three-fourth: 75%,
+  fifth: 20%,
+  two-fifth: 40%,
+  three-fifth: 60%,
+  four-fifth: 80%,
+  sixth: 16.66666%
+);
+$bbq-grid-offpart: none half third two-third fourth three-fourth fifth two-fifth three-fifth four-fifth sixth !default;
+$bbq-grid-offpart-sizes: (
+  half: 50%,
+  third: 33.33333%,
+  two-third: 66.66666%,
+  fourth: 25%,
+  three-fourth: 75%,
+  fifth: 20%,
+  two-fifth: 40%,
+  three-fifth: 60%,
+  four-fifth: 80%,
+  sixth: 16.66666%,
+  none: 0
+);
+
+
+@function in($list, $var) {
+  @return (false != index($list, $var));
+}
+
+.flex {
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: calc($bbq-grid-gutter-horizontal * -1);
+  width: calc(100% + #{$bbq-grid-gutter-horizontal});
+  flex-wrap: wrap;
+  transition: all .3s ease;
+}
+
+.flex > * {
+  box-sizing: border-box;
+  flex: 1 1 auto; /* Default for IE10 bug */
+  padding-left: $bbq-grid-gutter-horizontal;
+  padding-bottom: $bbq-grid-gutter-vertical;
+}
+
+.flex {
+  &[class*="one"],
+  &[class*="two"],
+  &[class*="three"],
+  &[class*="four"],
+  &[class*="five"],
+  &[class*="six"],
+  &[class*="seven"],
+  &[class*="eight"],
+  &[class*="nine"],
+  &[class*="ten"],
+  &[class*="eleven"],
+  &[class*="twelve"] {
+    > * {
+      flex-grow: 0;
+    }
+  }
+}
+
+.flex.grow > * {
+  flex-grow: 1;
+}
+
+.center {
+  justify-content: center;
+}
+
+@each $count in $bbq-grid-count {
+  .#{$count} > * {
+    width: map-get($bbq-grid-count-sizes, $count);
+  }
+}
+
+@each $i in $bbq-grid-sizes {
+  @media all and (min-width: unquote($i + 'px')) {
+    @each $count in $bbq-grid-count {
+      .#{$count}-#{$i} > * {
+        width: map-get($bbq-grid-count-sizes, $count);
+      }
+    }
+  }
+}
+
+
+// Children sizing
+@each $part in $bbq-grid-part {
+  .#{$part} {
+    width: map-get($bbq-grid-part-sizes, $part);
+  }
+}
+.none { display: none; }
+
+
+@each $i in $bbq-grid-sizes {
+  @media all and (min-width: unquote($i + 'px')) {
+    @each $part in $bbq-grid-part {
+      .#{$part}-#{$i} {
+        width: map-get($bbq-grid-part-sizes, $part);
+        display: block;
+      }
+    }
+  }
+}
+@each $i in $bbq-grid-children {
+  @media all and (min-width: unquote($i + 'px')) {
+    .none-#{$i} { display: none; }
+  }
+}
+
+
+
+@each $part in $bbq-grid-offpart {
+  .off-#{$part} {
+    margin-left: map-get($bbq-grid-offpart-sizes, $part);
+  }
+}
+
+
+@each $i in $bbq-grid-sizes {
+  @media all and (min-width: unquote($i + 'px')) {
+    @each $part in $bbq-grid-offpart {
+      .off-#{$part}-#{$i} {
+        margin-left: map-get($bbq-grid-offpart-sizes, $part);
+      }
+    }
+  }
+}

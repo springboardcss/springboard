@@ -1,0 +1,31 @@
+// Checkbox
+
+// Variables
+$bbq-checkbox-character: '\2714' !default;
+$bbq-checkbox-radius: $bbq-radius !default;
+
+
+%checkbox {
+  @extend %radio;
+  
+  + .checkable:before {
+    border-radius: $bbq-checkbox-radius;
+    }
+
+  + .checkable:after {
+    content: $bbq-checkbox-character;
+    background: none;
+    transform: scale(2) translateY(-25%);
+    visibility: hidden;
+    opacity: 0;
+    }
+
+  &:checked + .checkable:after {
+    color: $bbq-black;
+    background: none;
+    transform: translateY(-50%);
+    transition: $bbq-transition;
+    visibility: visible;
+    opacity: 1;
+    }
+  }

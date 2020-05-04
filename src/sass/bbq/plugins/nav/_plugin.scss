@@ -1,0 +1,119 @@
+// Navigation bar
+@import 'class';
+
+nav {
+  @extend %nav;
+}
+
+@if $bbq-nav-responsive {
+  nav .burger {
+    display: none;
+  }
+
+  @media all and (max-width: $bbq-breakpoint) {
+
+    nav {
+      .burger {
+        display: inline-block;
+        cursor: pointer;
+        bottom: -1000em;
+        margin: 0;
+      }
+
+      .burger ~ .menu,
+      .show:checked ~ .burger {
+        position: fixed;
+        min-height: 100%;
+        top: 0;
+
+        @if $bbq-nav-open-left{
+          left: 0;
+        }
+        @else{
+          right: 0;
+        }
+
+        bottom: -1000em;
+        margin: 0;
+        background: $bbq-white;
+        transition: all $bbq-nav-timing ease;
+        transform: none;
+      }
+
+      .burger ~ .menu {
+        z-index: 11;
+      }
+
+      .show:checked ~ .burger {
+        color: transparent;
+        width: 100%;
+        border-radius: 0;
+        background: rgba(0, 0, 0, .2);
+        transition: all $bbq-nav-timing ease;
+      }
+
+
+
+      // Show animation
+      .show ~ .menu {
+        width: 70%;
+        max-width: 300px;
+        // max-width: 0;
+        transform-origin: center right;
+        transition: all $bbq-nav-timing / 2 ease;
+
+        // opacity: 0;
+        // width: 0;
+        transform: scaleX(0);
+
+        & > * {
+          transform: translateX(100%);
+          transition: all 0s ease $bbq-nav-timing;
+        }
+      }
+
+      .show:checked ~ .menu > *:nth-child(1) {
+        transition: all $bbq-nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+      }
+      .show:checked ~ .menu > *:nth-child(2) {
+        transition: all $bbq-nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $bbq-nav-timing * 0.2;
+      }
+      .show:checked ~ .menu > *:nth-child(3) {
+        transition: all $bbq-nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $bbq-nav-timing * 0.4;
+      }
+      .show:checked ~ .menu > *:nth-child(4) {
+        transition: all $bbq-nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $bbq-nav-timing * 0.6;
+      }
+      .show:checked ~ .menu > *:nth-child(5) {
+        transition: all $bbq-nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $bbq-nav-timing * 0.8;
+      }
+      .show:checked ~ .menu > *:nth-child(6) {
+        transition: all $bbq-nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $bbq-nav-timing * 1;
+      }
+
+      .show:checked ~ .menu {
+        // opacity: 1;
+        // width: 70%;
+        transform: scaleX(1);
+
+        & > * {
+          transform: translateX(0);
+          transition: all $bbq-nav-timing ease-in-out $bbq-nav-timing * 1.2;
+        }
+      }
+
+
+
+      .burger ~ .menu > * {
+        display: block;
+        margin: calc(#{$bbq-separation} / 2);
+        text-align: left;
+        max-width: calc(100% - #{$bbq-separation});
+      }
+
+      .burger ~ .menu > a {
+        padding: calc(#{$bbq-separation} / 2) calc(#{$bbq-separation} * 1.5);
+      }
+    }
+  }
+}
