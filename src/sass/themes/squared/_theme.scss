@@ -1,0 +1,38 @@
+// Top level variables for BBQ CSS
+// Note: some others are available under each specific plugin
+
+@import 'colors';
+
+
+// Colors (from /themes/default/colors)
+$sb-white: #fff;
+$sb-black: #111;
+$sb-primary: darken($green, 5%);
+$sb-success: $blue;
+$sb-warning: $orange;
+$sb-error: $red;
+$sb-dull: $gray;
+$sb-color-variation: 10%;
+$sb-transparency: .1;
+
+
+// Spaces
+$sb-separation: .6em;
+$sb-breakpoint: 60em;
+
+
+// Shapes
+$sb-radius: 0;
+$sb-border: 1px solid #ddd;
+$sb-shadow: none;
+
+
+// Transitions
+$sb-transition: all .2s ease;
+
+
+
+
+
+// Plugins
+$sb-nav-position: absolute;

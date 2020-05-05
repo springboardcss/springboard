@@ -1,0 +1,69 @@
+// %button
+// This class defines a clickable element that looks like a label
+
+
+
+// Variables
+$sb-button-margin: #{$sb-separation} / 2 0 !default;
+$sb-button-padding: $sb-label-padding !default;
+$sb-button-hover: inset 0 0 0 99em rgba($sb-white, $sb-transparency) !default;
+$sb-button-click: inset 0 0 0 99em rgba($sb-black, $sb-transparency) !default;
+$sb-button-pseudo-hover: inset 0 0 0 99em rgba($sb-black, $sb-transparency / 2) !default;
+$sb-button-transition: $sb-transition !default;
+$sb-button-radius: $sb-label-radius !default;
+
+
+
+// Definition
+%button {
+  @extend %label;
+
+  margin: $sb-button-margin;
+  cursor: pointer;
+  transition: $sb-button-transition;
+  border-radius: $sb-button-radius;
+
+  // Avoid the input { height: 2.2 }
+  height: auto;
+  vertical-align: baseline;
+
+  // This avoids a nasty "hover" issue (slightly taller on hover)
+  box-shadow: 0 0 rgba(0, 0, 0, 0) inset;
+
+  // Methods
+  &:hover,
+  &:focus {
+    box-shadow: $sb-button-hover;
+    border: 0;
+    }
+
+  &.pseudo:hover,
+  &.pseudo:focus {
+    box-shadow: $sb-button-pseudo-hover;
+    }
+
+  &.active,
+  &:active,
+  &.pseudo:active {
+    box-shadow: $sb-button-click;
+    }
+
+  &[disabled] {
+    cursor: default;
+    box-shadow: none;
+    background: #bbb;
+    }
+  }
+
+
+// // Note: If you try to do this there's a selector explossion:
+
+// &%hover {
+//   box-shadow: $sb-button-hover;
+//   }
+
+// &:hover {
+//   @extend %hover;
+//   }
+
+// Like `button.button:hover, .button[type="submit"], ...`

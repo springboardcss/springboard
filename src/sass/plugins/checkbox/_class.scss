@@ -1,0 +1,31 @@
+// Checkbox
+
+// Variables
+$sb-checkbox-character: '\2714' !default;
+$sb-checkbox-radius: $sb-radius !default;
+
+
+%checkbox {
+  @extend %radio;
+  
+  + .checkable:before {
+    border-radius: $sb-checkbox-radius;
+    }
+
+  + .checkable:after {
+    content: $sb-checkbox-character;
+    background: none;
+    transform: scale(2) translateY(-25%);
+    visibility: hidden;
+    opacity: 0;
+    }
+
+  &:checked + .checkable:after {
+    color: $sb-black;
+    background: none;
+    transform: translateY(-50%);
+    transition: $sb-transition;
+    visibility: visible;
+    opacity: 1;
+    }
+  }

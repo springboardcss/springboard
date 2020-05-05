@@ -1,0 +1,72 @@
+* {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  color: $sb-black;
+  font-size: 1.1em;
+  line-height: 1.75;
+  background: $sb-white;
+}
+
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: #{$sb-separation} 0;
+}
+
+li {
+  margin: 0 0 calc(#{$sb-separation} / 2);
+}
+
+a {
+  color: $sb-primary;
+  text-decoration: none;
+  box-shadow: none;
+  transition: $sb-transition;
+}
+
+
+// The <pre> doesn't have a nice style from Normalize.css
+
+code {
+  padding: calc(#{$sb-separation} / 2) #{$sb-separation};
+  font-size: .8em;
+  background: #f5f5f5;
+}
+
+pre {
+  text-align: left;
+  padding: calc(#{$sb-separation} / 2) #{$sb-separation};
+  background: #f5f5f5;
+  border-radius: $sb-radius;
+
+  code {
+    padding: 0;
+  }
+}
+
+blockquote {
+  padding: 0 0 0 1em;
+  margin: 0 0 0 .1em;
+  box-shadow: inset 5px 0 rgba($sb-black, .3);
+}
+
+label {
+  cursor: pointer;
+}

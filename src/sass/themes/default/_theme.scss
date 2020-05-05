@@ -1,0 +1,35 @@
+// Top level variables for BBQ CSS
+// Note: some others are available under each specific plugin
+
+@import 'colors';
+
+:root {
+    //setup seperation modular scale and save as CSS property
+    @include ms-respond(--seperation,0)
+
+}
+
+// Colors (from /themes/default/colors)
+$sb-white: #fff;
+$sb-black: #111;
+$sb-primary: $blue;
+$sb-success: $green;
+$sb-warning: $orange;
+$sb-error: $red;
+$sb-dull: $gray;
+$sb-color-variation: 10%;
+$sb-transparency: .2;
+
+
+// Spaces
+$sb-separation: var(--seperation);
+$sb-breakpoint: 60em;
+
+
+// Shapes
+$sb-radius: .2em;
+$sb-border: 1px solid #ccc;
+$sb-shadow: 0 0 .2em rgba($sb-black, $sb-transparency);
+
+// Transitions
+$sb-transition: all .3s;

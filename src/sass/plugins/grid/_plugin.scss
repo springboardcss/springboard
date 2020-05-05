@@ -1,0 +1,162 @@
+@import 'class';
+
+$sb: #{$sb-separation} !default;
+$sb-vertical: $sb !default;
+$sb-horizontal: $sb !default;
+
+$sb-grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 !default;
+$sb-grid-children: $sb-grid-sizes !default;
+$sb-grid-off: $sb-grid-sizes !default;
+
+$sb-grid-count: one two three four five six seven eight nine ten eleven twelve !default;
+$sb-grid-count-sizes: (
+  one: 100%,
+  two: 50%,
+  three: 33.33333%,
+  four: 25%,
+  five: 20%,
+  six: 16.66666%,
+  seven: 14.28571%,
+  eight: 12.5%,
+  nine: 11.11111%,
+  ten: 10%,
+  eleven: 9.09091%,
+  twelve: 8.33333%
+);
+$sb-grid-part: full half third two-third fourth three-fourth fifth two-fifth three-fifth four-fifth sixth !default;
+$sb-grid-part-sizes: (
+  full: 100%,
+  half: 50%,
+  third: 33.33333%,
+  two-third: 66.66666%,
+  fourth: 25%,
+  three-fourth: 75%,
+  fifth: 20%,
+  two-fifth: 40%,
+  three-fifth: 60%,
+  four-fifth: 80%,
+  sixth: 16.66666%
+);
+$sb-grid-offpart: none half third two-third fourth three-fourth fifth two-fifth three-fifth four-fifth sixth !default;
+$sb-grid-offpart-sizes: (
+  half: 50%,
+  third: 33.33333%,
+  two-third: 66.66666%,
+  fourth: 25%,
+  three-fourth: 75%,
+  fifth: 20%,
+  two-fifth: 40%,
+  three-fifth: 60%,
+  four-fifth: 80%,
+  sixth: 16.66666%,
+  none: 0
+);
+
+
+@function in($list, $var) {
+  @return (false != index($list, $var));
+}
+
+.flex {
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: calc(#{$sb-horizontal} * -1);
+  width: calc(100% + #{$sb-horizontal});
+  flex-wrap: wrap;
+  transition: all .3s ease;
+}
+
+.flex > * {
+  box-sizing: border-box;
+  flex: 1 1 auto; /* Default for IE10 bug */
+  padding-left: $sb-horizontal;
+  padding-bottom: $sb-vertical;
+}
+
+.flex {
+  &[class*="one"],
+  &[class*="two"],
+  &[class*="three"],
+  &[class*="four"],
+  &[class*="five"],
+  &[class*="six"],
+  &[class*="seven"],
+  &[class*="eight"],
+  &[class*="nine"],
+  &[class*="ten"],
+  &[class*="eleven"],
+  &[class*="twelve"] {
+    > * {
+      flex-grow: 0;
+    }
+  }
+}
+
+.flex.grow > * {
+  flex-grow: 1;
+}
+
+.center {
+  justify-content: center;
+}
+
+@each $count in $sb-grid-count {
+  .#{$count} > * {
+    width: map-get($sb-grid-count-sizes, $count);
+  }
+}
+
+@each $i in $sb-grid-sizes {
+  @media all and (min-width: unquote($i + 'px')) {
+    @each $count in $sb-grid-count {
+      .#{$count}-#{$i} > * {
+        width: map-get($sb-grid-count-sizes, $count);
+      }
+    }
+  }
+}
+
+
+// Children sizing
+@each $part in $sb-grid-part {
+  .#{$part} {
+    width: map-get($sb-grid-part-sizes, $part);
+  }
+}
+.none { display: none; }
+
+
+@each $i in $sb-grid-sizes {
+  @media all and (min-width: unquote($i + 'px')) {
+    @each $part in $sb-grid-part {
+      .#{$part}-#{$i} {
+        width: map-get($sb-grid-part-sizes, $part);
+        display: block;
+      }
+    }
+  }
+}
+@each $i in $sb-grid-children {
+  @media all and (min-width: unquote($i + 'px')) {
+    .none-#{$i} { display: none; }
+  }
+}
+
+
+
+@each $part in $sb-grid-offpart {
+  .off-#{$part} {
+    margin-left: map-get($sb-grid-offpart-sizes, $part);
+  }
+}
+
+
+@each $i in $sb-grid-sizes {
+  @media all and (min-width: unquote($i + 'px')) {
+    @each $part in $sb-grid-offpart {
+      .off-#{$part}-#{$i} {
+        margin-left: map-get($sb-grid-offpart-sizes, $part);
+      }
+    }
+  }
+}

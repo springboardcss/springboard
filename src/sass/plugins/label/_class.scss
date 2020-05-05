@@ -1,0 +1,43 @@
+// Label of text
+$sb-label-padding: calc(#{$sb-separation} / 2) calc(#{$sb-separation} * 1.5 ) !default;
+$sb-label-radius: $sb-radius !default;
+
+// Styles
+%label {
+  display: inline-block;
+  text-align: center;
+  letter-spacing: inherit;
+  margin: 0;
+  padding: $sb-label-padding;
+  vertical-align: middle;
+  background: $sb-primary;
+  color: $sb-white;
+  border: 0;
+  border-radius: $sb-label-radius;
+  width: auto;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  // Colors
+  &.success {
+    background: $sb-success;
+  }
+
+  &.warning {
+    background: $sb-warning;
+  }
+
+  &.error {
+    background: $sb-error;
+  }
+
+  &.pseudo {
+    background-color: transparent;
+    color: inherit;
+  }
+}

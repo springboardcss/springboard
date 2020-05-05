@@ -1,0 +1,36 @@
+table {
+  text-align: left;
+  }
+
+td,
+th {
+  padding: $sb-separation / 2 2.4em $sb-separation / 2 $sb-separation;
+  }
+
+th {
+  text-align: left;
+  font-weight: 900;
+  color: $sb-white;
+  background-color: $sb-primary;
+  }
+
+.success th {
+  background-color: $sb-success;
+  }
+
+.warning th {
+  background-color: $sb-warning;
+  }
+
+.error th {
+  background-color: $sb-error;
+  }
+
+.dull th {
+  background-color: $sb-dull;
+  }
+
+// Zebra stripes
+tr:nth-child(even) {
+  background: rgba(0, 0, 0, .05);
+  }

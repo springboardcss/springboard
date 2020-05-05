@@ -1,0 +1,25 @@
+
+// Variables
+$sb-input-height: 2.1em !default;
+$sb-input-padding: calc(#{$sb-separation} / 2) #{$sb-separation} !default;
+$sb-input-background: #fff !default;
+
+
+
+// Top level selector
+%input {
+  line-height: 1.5;
+  margin: 0;
+  height: $sb-input-height;
+  padding: $sb-input-padding;
+  border: $sb-border;
+  background-color: $sb-input-background;
+  border-radius: $sb-radius;
+  transition: $sb-transition;
+  width: 100%;
+
+  &:focus {
+    border: 1px solid $sb-primary;
+    outline: 0;
+  }
+}
