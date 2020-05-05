@@ -1,11 +1,12 @@
 {
   "name": "springboard-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Springboard CSS",
   "main": "index.js",
   "scripts": {
     "start": "webpack -w --mode=development --env.NODE_ENV=development",
-    "build": "webpack --mode=development --env.NODE_ENV=production && webpack --mode=development --env.NODE_ENV=development",
+    "build": "yarn vendor && webpack --mode=development --env.NODE_ENV=production && webpack --mode=development --env.NODE_ENV=development",
+    "vendor": "cp -rf ./node_modules/mathsass ./src/sass/vendor/ && cp -rf ./node_modules/modularscale-sass ./src/sass/vendor/",
     "push": "git add . && git commit -m 'update from dev' && git push"
   },
   "repository": {
