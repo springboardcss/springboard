@@ -1,4 +1,4 @@
-# Springboard CSS 0.0.1
+# Springboard CSS
 
 Springboard is a highly responsive CSS library designed to be the starting point of your next site.
 
