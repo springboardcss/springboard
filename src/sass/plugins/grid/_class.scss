@@ -1,4 +1,4 @@
-$sb: #{$sb-separation} !default;
+$sb: var(--seperation) !default;
 $sb-vertical: $sb !default;
 
 // Real code

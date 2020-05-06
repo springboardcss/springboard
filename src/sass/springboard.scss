@@ -1,13 +1,13 @@
 //! Springboard CSS http://www.springboardcss.com/
 
 // Math Sass
-@import './vendor/mathsass/dist/math';
+@import './vendor/mathsass/dist/functions/pow';
 
 // Modularscale
-@import './vendor/modularscale-sass/libsass/scss/main.scss';
+@import './vendor/modularscale-sass/stylesheets/modularscale';
 
 // Imports the base variable styles
-@import './themes/default/theme';
+@import './themes/squared/theme';
 
 @import './vendor/compass-breakpoint/stylesheets/breakpoint';
 

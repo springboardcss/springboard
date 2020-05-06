@@ -70,7 +70,7 @@ $sb-tooltip-size: .8em !default;
 
   &:hover:after,
   &:focus:after {
-    padding: calc(#{$sb-separation} * .75) calc(#{$sb-separation} * 1.5);
+    padding: var(--seperation-less) var(--seperation-more);
     }
   }
 

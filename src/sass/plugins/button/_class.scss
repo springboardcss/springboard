@@ -4,7 +4,7 @@
 
 
 // Variables
-$sb-button-margin: #{$sb-separation} / 2 0 !default;
+$sb-button-margin: var(--seperation-least) 0 !default;
 $sb-button-padding: $sb-label-padding !default;
 $sb-button-hover: inset 0 0 0 99em rgba($sb-white, $sb-transparency) !default;
 $sb-button-click: inset 0 0 0 99em rgba($sb-black, $sb-transparency) !default;

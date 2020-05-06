@@ -1,7 +1,7 @@
 
 // Variables
 $sb-input-height: 2.1em !default;
-$sb-input-padding: calc(#{$sb-separation} / 2) #{$sb-separation} !default;
+$sb-input-padding: var(--seperation-least) var(--seperation) !default;
 $sb-input-background: #fff !default;
 
 

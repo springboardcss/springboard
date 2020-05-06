@@ -1,7 +1,7 @@
 // Variables
 $sb-select-height: 2.2em !default;
-$sb-select-margin: calc(#{$sb-separation} / 2) !default;
-$sb-select-padding: calc(#{$sb-separation} / 2) calc(#{$sb-separation} * 0.75) !default;
+$sb-select-margin: var(--seperation-least) !default;
+$sb-select-padding: var(--seperation-least) var(--seperation-less) !default;
 
 // This comes from arrow.svg. Converted with:
 // http://dopiaza.org/tools/datauri/index.php
@@ -53,7 +53,7 @@ $sb-select-dropimage: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy5
 
   option {
     font-size: inherit;
-    padding: calc(#{$sb-separation} * 0.75);
+    padding: var(--seperation-less);
   }
 
   &[multiple] {

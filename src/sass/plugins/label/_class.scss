@@ -1,5 +1,5 @@
 // Label of text
-$sb-label-padding: calc(#{$sb-separation} / 2) calc(#{$sb-separation} * 1.5 ) !default;
+$sb-label-padding: var(--seperation-least) var(--seperation) !default;
 $sb-label-radius: $sb-radius !default;
 
 // Styles

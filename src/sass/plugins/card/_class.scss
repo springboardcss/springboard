@@ -20,7 +20,7 @@ $sb-card-radius: $sb-radius !default;
   overflow: hidden;
   text-align: left;
   background: $sb-white;
-  margin-bottom: #{$sb-separation};
+  margin-bottom: var(--seperation);
   padding: 0;
   transition: all .3s ease;
 
@@ -87,7 +87,7 @@ $sb-card-radius: $sb-radius !default;
     }
 
   p {
-    margin: #{$sb-separation} / 2 0;
+    margin: var(--seperation-least) 0;
 
     &:first-child {
       margin-top: 0;

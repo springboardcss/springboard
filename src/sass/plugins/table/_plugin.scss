@@ -4,7 +4,7 @@ table {
 
 td,
 th {
-  padding: $sb-separation / 2 2.4em $sb-separation / 2 $sb-separation;
+  padding: var(--seperation-least) 2.4em var(--seperation-least) var(--seperation);
   }
 
 th {

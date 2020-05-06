@@ -106,13 +106,13 @@ nav {
 
       .burger ~ .menu > * {
         display: block;
-        margin: calc(#{$sb-separation} / 2);
+        margin: var(--seperation);
         text-align: left;
-        max-width: calc(100% - #{$sb-separation});
+        max-width: calc(100% - var(-seperation));
       }
 
       .burger ~ .menu > a {
-        padding: calc(#{$sb-separation} / 2) calc(#{$sb-separation} * 1.5);
+        padding: var(--seperation-least) var(--seperation-more);
       }
     }
   }
