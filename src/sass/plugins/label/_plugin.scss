@@ -1,11 +1,32 @@
 // Inherit from the class
-@import 'class';
+$radius: 0 !default;
+$primary: royalblue !default;
+$white: #fff !default;
+$success: green !default;
+$warning: goldenrod !default;
+$error: red !default;
+$font-size: -1 !default;
+$padding: 0;
+
+@use '../modularscale/index' as *;
+
+@use 'class' with (
+  $radius: $radius,
+  $primary: $primary,
+  $white: $white,
+  $success: $success,
+  $warning: $warning,
+  $error: $error
+);
 
 .label {
   @extend %label;
-
-  font-size: .6em;
-  padding: .4em .6em;
-  margin-left: 1em;
+  // font-size: $font-size;
+  @include mod(font-size,$font-size);
+  // padding: .4em .6em;
+  padding: var(--space-least) var(--space-less);
+  // margin-left: 1em;
+  margin-left: var(--space);
   line-height: 1;
 }
+

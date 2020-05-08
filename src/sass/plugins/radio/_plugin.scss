@@ -2,6 +2,8 @@
 // Allows to choose one element from several of them
 @import 'class';
 
+$radio-size: 1em !default;
+$radio-border: 1px solid #aaa !default;
 
 [type=radio] {
   @extend %radio;

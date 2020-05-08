@@ -1,27 +1,27 @@
 // %button
 // This class defines a clickable element that looks like a label
-
-
+@use '../label/plugin';
 
 // Variables
-$sb-button-margin: var(--seperation-least) 0 !default;
-$sb-button-padding: $sb-label-padding !default;
-$sb-button-hover: inset 0 0 0 99em rgba($sb-white, $sb-transparency) !default;
-$sb-button-click: inset 0 0 0 99em rgba($sb-black, $sb-transparency) !default;
-$sb-button-pseudo-hover: inset 0 0 0 99em rgba($sb-black, $sb-transparency / 2) !default;
-$sb-button-transition: $sb-transition !default;
-$sb-button-radius: $sb-label-radius !default;
-
-
+// $margin: 0 !default;
+// $padding: 0 !default;
+$black: #000 !default;
+$white: #fff !default;
+$transparency: .9 !default;
+$hover: inset 0 0 0 99em rgba($white, $transparency) !default;
+$click: inset 0 0 0 99em rgba($black, $transparency) !default;
+$pseudo-hover: inset 0 0 0 99em rgba($black, $transparency / 2) !default;
+$transition: all 0.3s !default;
+$radius: 0 !default;
 
 // Definition
 %button {
   @extend %label;
 
-  margin: $sb-button-margin;
+  margin: 0;
   cursor: pointer;
-  transition: $sb-button-transition;
-  border-radius: $sb-button-radius;
+  transition: $transition;
+  border-radius: $radius;
 
   // Avoid the input { height: 2.2 }
   height: auto;
@@ -33,19 +33,19 @@ $sb-button-radius: $sb-label-radius !default;
   // Methods
   &:hover,
   &:focus {
-    box-shadow: $sb-button-hover;
+    box-shadow: $hover;
     border: 0;
     }
 
   &.pseudo:hover,
   &.pseudo:focus {
-    box-shadow: $sb-button-pseudo-hover;
+    box-shadow: $pseudo-hover;
     }
 
   &.active,
   &:active,
   &.pseudo:active {
-    box-shadow: $sb-button-click;
+    box-shadow: $click;
     }
 
   &[disabled] {
@@ -56,10 +56,10 @@ $sb-button-radius: $sb-label-radius !default;
   }
 
 
-// // Note: If you try to do this there's a selector explossion:
+// Note: If you try to do this there's a selector explossion:
 
 // &%hover {
-//   box-shadow: $sb-button-hover;
+//   box-shadow: $hover;
 //   }
 
 // &:hover {

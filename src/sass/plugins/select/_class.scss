@@ -1,28 +1,37 @@
 // Variables
-$sb-select-height: 2.2em !default;
-$sb-select-margin: var(--seperation-least) !default;
-$sb-select-padding: var(--seperation-least) var(--seperation-less) !default;
+// $height: 2.2em !default;
+$height: 0 !default;
+$margin: var(--seperation-least) !default;
+$padding: var(--seperation-least) var(--seperation-less) !default;
+$primary: royalblue !default;
+$black: #000 !default;
+$border: 1px solid #ccc !default;
+$radius: 0 !default;
 
 // This comes from arrow.svg. Converted with:
 // http://dopiaza.org/tools/datauri/index.php
-$sb-select-dropimage: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=" !default;
+$dropimage: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=" !default;
+
+@use '../modularscale/index' as *;
+
+@debug "height #{$height}";
 
 // Code
 %select {
   // Compatible with old androids
-  background: #fff url(#{$sb-select-dropimage}) no-repeat scroll 95% center/
+  background: #fff url(#{$dropimage}) no-repeat scroll 95% center/
     10px 15px;
 
   // Compatible with modern browsers
   background-position: calc(100% - 15px) center;
 
-  border: $sb-border;
-  border-radius: $sb-radius;
+  border: $border;
+  border-radius: $radius;
   cursor: pointer;
   width: 100%;
-  height: $sb-select-height;
+  @include mod(height,$height);
   box-sizing: border-box;
-  padding: $sb-select-padding;
+  padding: $padding;
   transition: all 0.3s;
 
   // Hide dropdown arrow
@@ -42,17 +51,17 @@ $sb-select-dropimage: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy5
 
   &:focus,
   &:active {
-    border: 1px solid $sb-primary;
+    border: 1px solid $primary;
     transition: outline 0s;
   }
 
   &:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 $sb-black;
+    text-shadow: 0 0 0 $black;
   }
 
   option {
-    font-size: inherit;
+    //font-size: inherit;
     padding: var(--seperation-less);
   }
 

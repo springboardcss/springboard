@@ -1,45 +1,65 @@
 //! Springboard CSS http://www.springboardcss.com/
 
 // Math Sass
-@import './vendor/mathsass/dist/functions/pow';
-
-// Modularscale
-@import './vendor/modularscale-sass/stylesheets/modularscale';
-
+// @use 'mathsass/dist/functions/pow'
 // Imports the base variable styles
-@import './themes/squared/theme';
+@use './themes/squared/theme';
 
-@import './vendor/compass-breakpoint/stylesheets/breakpoint';
+@use './plugins/modularscale/index.scss' with (
+  $ms: theme.$modularscale
+);
 
-// Normalize.css (external library)
-@import './plugins/normalize/plugin';
+@use './plugins/root/plugin' as root;
+
 
 // Generic styles for things like <body>, <a> and others
 // It also overwrites normalize.css a bit
-@import './plugins/generic/plugin';
-@import './plugins/fontello/plugin';
+@use './plugins/generic/plugin' as generic;
+
+@use 'breakpoint-sass/stylesheets/breakpoint';
+
+// Normalize.css (external library)
+@use './plugins/normalize/plugin' as normalize;
+
+@use './plugins/fontello/plugin' as fontello;
 
 // Simple elements
-@import './plugins/label/plugin';
-@import './plugins/button/plugin';
+@use './plugins/label/plugin' as label with (
+  $radius: theme.$radius,
+  $primary: theme.$primary,
+  $white: theme.$white,
+  $success: theme.$success,
+  $warning: theme.$warning,
+  $error: theme.$error
+);
+
+@use './plugins/button/plugin' as button with (
+  $radius: theme.$radius
+);
 
 // Forms
-@import './plugins/input/plugin';
-@import './plugins/select/plugin';
-@import './plugins/radio/plugin';
-@import './plugins/checkbox/plugin';
+@use './plugins/input/plugin' as input with (
+  $primary: theme.$primary,
+  $radius: theme.$radius,
+  $transition: theme.$transition, 
+);
+
+@use './plugins/select/plugin' as select;
+ 
+@use './plugins/radio/plugin' as radio;
+@use './plugins/checkbox/plugin' as checkbox;
 
 // Components
-@import './plugins/table/plugin';
-@import './plugins/grid/plugin';
+@use './plugins/table/plugin' as table;
+@use './plugins/grid/plugin' as grid;
 
 // Extra
-@import './plugins/nav/plugin';
+@use './plugins/nav/plugin' as nav;
 
-@import './plugins/stack/plugin';
-@import './plugins/card/plugin';
-@import './plugins/modal/plugin';
+@use './plugins/stack/plugin' as stack;
+@use './plugins/card/plugin';
+@use './plugins/modal/plugin' as modal;
 
-@import './plugins/dropimage/plugin';
-@import './plugins/tabs/plugin';
-@import './plugins/tooltip/plugin';
+// @use './plugins/dropimage/plugin';
+@use './plugins/tabs/plugin' as tabs;
+@use './plugins/tooltip/plugin' as tooltip;

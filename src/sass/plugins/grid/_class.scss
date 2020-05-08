@@ -1,7 +1,7 @@
-$sb: var(--seperation) !default;
-$sb-vertical: $sb !default;
+$space: var(--seperation) !default;
+$vertical: $space !default;
 
 // Real code
-$sb-grid-gutter: 10px !default;
+$grid-gutter: 10px !default;
 
-$sb-horizontal: $sb-grid-gutter !default;
+$horizontal: $grid-gutter !default;

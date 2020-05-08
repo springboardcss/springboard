@@ -1,15 +1,15 @@
-@import 'class';
+@use 'class';
 
-$sb: var(--seperation) !default;
-$sb-vertical: $sb !default;
-$sb-horizontal: $sb !default;
+$space: var(--seperation) !default;
+$vertical: $space !default;
+$horizontal: $space !default;
 
-$sb-grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 !default;
-$sb-grid-children: $sb-grid-sizes !default;
-$sb-grid-off: $sb-grid-sizes !default;
+$grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 !default;
+$grid-children: $grid-sizes !default;
+$grid-off: $grid-sizes !default;
 
-$sb-grid-count: one two three four five six seven eight nine ten eleven twelve !default;
-$sb-grid-count-sizes: (
+$grid-count: one two three four five six seven eight nine ten eleven twelve !default;
+$grid-count-sizes: (
   one: 100%,
   two: 50%,
   three: 33.33333%,
@@ -23,8 +23,8 @@ $sb-grid-count-sizes: (
   eleven: 9.09091%,
   twelve: 8.33333%
 );
-$sb-grid-part: full half third two-third fourth three-fourth fifth two-fifth three-fifth four-fifth sixth !default;
-$sb-grid-part-sizes: (
+$grid-part: full half third two-third fourth three-fourth fifth two-fifth three-fifth four-fifth sixth !default;
+$grid-part-sizes: (
   full: 100%,
   half: 50%,
   third: 33.33333%,
@@ -37,8 +37,8 @@ $sb-grid-part-sizes: (
   four-fifth: 80%,
   sixth: 16.66666%
 );
-$sb-grid-offpart: none half third two-third fourth three-fourth fifth two-fifth three-fifth four-fifth sixth !default;
-$sb-grid-offpart-sizes: (
+$grid-offpart: none half third two-third fourth three-fourth fifth two-fifth three-fifth four-fifth sixth !default;
+$grid-offpart-sizes: (
   half: 50%,
   third: 33.33333%,
   two-third: 66.66666%,
@@ -60,8 +60,8 @@ $sb-grid-offpart-sizes: (
 .flex {
   display: -ms-flexbox;
   display: flex;
-  margin-left: calc(#{$sb-horizontal} * -1);
-  width: calc(100% + #{$sb-horizontal});
+  margin-left: calc(#{$horizontal} * -1);
+  width: calc(100% + #{$horizontal});
   flex-wrap: wrap;
   transition: all .3s ease;
 }
@@ -69,8 +69,8 @@ $sb-grid-offpart-sizes: (
 .flex > * {
   box-sizing: border-box;
   flex: 1 1 auto; /* Default for IE10 bug */
-  padding-left: $sb-horizontal;
-  padding-bottom: $sb-vertical;
+  padding-left: $horizontal;
+  padding-bottom: $vertical;
   &:last-child {
     padding-bottom: 0;
   }
@@ -103,17 +103,17 @@ $sb-grid-offpart-sizes: (
   justify-content: center;
 }
 
-@each $count in $sb-grid-count {
+@each $count in $grid-count {
   .#{$count} > * {
-    width: map-get($sb-grid-count-sizes, $count);
+    width: map-get($grid-count-sizes, $count);
   }
 }
 
-@each $i in $sb-grid-sizes {
+@each $i in $grid-sizes {
   @media all and (min-width: unquote($i + 'px')) {
-    @each $count in $sb-grid-count {
+    @each $count in $grid-count {
       .#{$count}-#{$i} > * {
-        width: map-get($sb-grid-count-sizes, $count);
+        width: map-get($grid-count-sizes, $count);
       }
     }
   }
@@ -121,25 +121,25 @@ $sb-grid-offpart-sizes: (
 
 
 // Children sizing
-@each $part in $sb-grid-part {
+@each $part in $grid-part {
   .#{$part} {
-    width: map-get($sb-grid-part-sizes, $part);
+    width: map-get($grid-part-sizes, $part);
   }
 }
 .none { display: none; }
 
 
-@each $i in $sb-grid-sizes {
+@each $i in $grid-sizes {
   @media all and (min-width: unquote($i + 'px')) {
-    @each $part in $sb-grid-part {
+    @each $part in $grid-part {
       .#{$part}-#{$i} {
-        width: map-get($sb-grid-part-sizes, $part);
+        width: map-get($grid-part-sizes, $part);
         display: block;
       }
     }
   }
 }
-@each $i in $sb-grid-children {
+@each $i in $grid-children {
   @media all and (min-width: unquote($i + 'px')) {
     .none-#{$i} { display: none; }
   }
@@ -147,18 +147,18 @@ $sb-grid-offpart-sizes: (
 
 
 
-@each $part in $sb-grid-offpart {
+@each $part in $grid-offpart {
   .off-#{$part} {
-    margin-left: map-get($sb-grid-offpart-sizes, $part);
+    margin-left: map-get($grid-offpart-sizes, $part);
   }
 }
 
 
-@each $i in $sb-grid-sizes {
+@each $i in $grid-sizes {
   @media all and (min-width: unquote($i + 'px')) {
-    @each $part in $sb-grid-offpart {
+    @each $part in $grid-offpart {
       .off-#{$part}-#{$i} {
-        margin-left: map-get($sb-grid-offpart-sizes, $part);
+        margin-left: map-get($grid-offpart-sizes, $part);
       }
     }
   }

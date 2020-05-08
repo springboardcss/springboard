@@ -1,8 +1,10 @@
 // Radio button
 
 // Variables
-$sb-radio-size: 1em !default;
-$sb-radio-border: 1px solid #aaa !default;
+$radio-size: 1em !default;
+$radio-border: 1px solid #aaa !default;
+$primary: royalblue !default;
+$transition: all .3s !default;
 
 // 
 %radio {
@@ -13,13 +15,13 @@ $sb-radio-border: 1px solid #aaa !default;
   
   + .checkable:hover:before,
   &:focus + .checkable:before {
-    border: 1px solid $sb-primary;
+    border: 1px solid $primary;
     }
   
   + .checkable {
     position: relative;
     cursor: pointer;
-    padding-left: $sb-radio-size * 1.5;
+    padding-left: $radio-size * 1.5;
     margin-right: .6em;
         
     &:before,
@@ -30,20 +32,20 @@ $sb-radio-border: 1px solid #aaa !default;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      font-size: $sb-radio-size;
-      line-height: $sb-radio-size;
+      font-size: $radio-size;
+      line-height: $radio-size;
       color: transparent;
       font-family: sans;
       text-align: center;
       box-sizing: border-box;
-      width: $sb-radio-size;
-      height: $sb-radio-size;
+      width: $radio-size;
+      height: $radio-size;
       border-radius: 50%;
-      transition: $sb-transition;
+      transition: $transition;
       }
 
     &:before {            
-      border: $sb-radio-border;
+      border: $radio-border;
       }
     }
 

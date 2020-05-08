@@ -1,25 +1,30 @@
 
-// Variables
-$sb-input-height: 2.1em !default;
-$sb-input-padding: var(--seperation-least) var(--seperation) !default;
-$sb-input-background: #fff !default;
+// Public Variables
+$primary: blue !default;
+$height: var(--space-most) !default;
+$bg: #fff !default;
+$radius: 0 !default;
+$transition: all .3s !default;
+$border: 1px solid #ccc !default;
 
+// Private Variables
+$padding: var(--space-least) var(--space);
 
 
 // Top level selector
 %input {
   line-height: 1.5;
   margin: 0;
-  height: $sb-input-height;
-  padding: $sb-input-padding;
-  border: $sb-border;
-  background-color: $sb-input-background;
-  border-radius: $sb-radius;
-  transition: $sb-transition;
+  height: $height;
+  padding: $padding;
+  border: $border;
+  background-color: $bg;
+  border-radius: $radius;
+  transition: $transition;
   width: 100%;
 
   &:focus {
-    border: 1px solid $sb-primary;
+    border-color: $primary;
     outline: 0;
   }
 }

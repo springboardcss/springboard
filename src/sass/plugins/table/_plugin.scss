@@ -1,3 +1,13 @@
+// Variables
+$white: #fff !default;
+$primary: royalblue !default;
+$success: green !default;
+$warning: goldenrod !default;
+$error: red !default;
+$dull: gray !default;
+$table-stripe: rgba(0, 0, 0, .05) !default;
+
+
 table {
   text-align: left;
   }
@@ -10,27 +20,27 @@ th {
 th {
   text-align: left;
   font-weight: 900;
-  color: $sb-white;
-  background-color: $sb-primary;
+  color: $white;
+  background-color: $primary;
   }
 
 .success th {
-  background-color: $sb-success;
+  background-color: $success;
   }
 
 .warning th {
-  background-color: $sb-warning;
+  background-color: $warning;
   }
 
 .error th {
-  background-color: $sb-error;
+  background-color: $error;
   }
 
 .dull th {
-  background-color: $sb-dull;
+  background-color: $dull;
   }
 
 // Zebra stripes
 tr:nth-child(even) {
-  background: rgba(0, 0, 0, .05);
+  background:$table-stripe;
   }

@@ -1,6 +1,13 @@
 // Label of text
-$sb-label-padding: var(--seperation-least) var(--seperation) !default;
-$sb-label-radius: $sb-radius !default;
+$radius: 0 !default;
+$primary: royalblue !default;
+$white: #fff !default;
+$success: green !default;
+$warning: goldenrod !default;
+$error: red !default;
+$radius: $radius !default;
+
+$padding: var(--seperation-least) var(--seperation);
 
 // Styles
 %label {
@@ -8,12 +15,12 @@ $sb-label-radius: $sb-radius !default;
   text-align: center;
   letter-spacing: inherit;
   margin: 0;
-  padding: $sb-label-padding;
+  padding: $padding;
   vertical-align: middle;
-  background: $sb-primary;
-  color: $sb-white;
+  background: $primary;
+  color: $white;
   border: 0;
-  border-radius: $sb-label-radius;
+  border-radius: $radius;
   width: auto;
 
   -webkit-touch-callout: none;
@@ -25,15 +32,15 @@ $sb-label-radius: $sb-radius !default;
 
   // Colors
   &.success {
-    background: $sb-success;
+    background: $success;
   }
 
   &.warning {
-    background: $sb-warning;
+    background: $warning;
   }
 
   &.error {
-    background: $sb-error;
+    background: $error;
   }
 
   &.pseudo {
