@@ -4,16 +4,6 @@
 @use '../config' as *;
 @use '../modularscale/index' as *;
 
-$h1-font-size: 4;
-$h2-font-size: 3;
-$h3-font-size: 2;
-$h4-font-size: 1;
-$h5-font-size: 0;
-$h6-font-size: 0;
-$heading-color: $black;
-$heading-padding-top: 1;
-$heading-padding-bottom: 0;
-
 %heading {
   color: $heading-color;
   @include mod(padding-top,$heading-padding-top);
