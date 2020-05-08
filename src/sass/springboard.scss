@@ -1,13 +1,9 @@
 //! Springboard CSS http://www.springboardcss.com/
 
-// Math Sass
-// @use 'mathsass/dist/functions/pow'
 // Imports the base variable styles
 @use './themes/squared/theme';
 
-@use './plugins/modularscale/index.scss' with (
-  $ms: theme.$modularscale
-);
+// @use './plugins/modularscale/index.scss' as *;
 
 @use './plugins/root/plugin' as root;
 
@@ -16,7 +12,7 @@
 // It also overwrites normalize.css a bit
 @use './plugins/generic/plugin' as generic;
 
-@use 'breakpoint-sass/stylesheets/breakpoint';
+@use 'breakpoint-sass/stylesheets/breakpoint' as *;
 
 // Normalize.css (external library)
 @use './plugins/normalize/plugin' as normalize;
@@ -24,28 +20,13 @@
 @use './plugins/fontello/plugin' as fontello;
 
 // Simple elements
-@use './plugins/label/plugin' as label with (
-  $radius: theme.$radius,
-  $primary: theme.$primary,
-  $white: theme.$white,
-  $success: theme.$success,
-  $warning: theme.$warning,
-  $error: theme.$error
-);
+@use './plugins/label/plugin' as label;
 
-@use './plugins/button/plugin' as button with (
-  $radius: theme.$radius
-);
+@use './plugins/button/plugin' as button;
 
 // Forms
-@use './plugins/input/plugin' as input with (
-  $primary: theme.$primary,
-  $radius: theme.$radius,
-  $transition: theme.$transition, 
-);
-
+@use './plugins/input/plugin' as input;
 @use './plugins/select/plugin' as select;
- 
 @use './plugins/radio/plugin' as radio;
 @use './plugins/checkbox/plugin' as checkbox;
 

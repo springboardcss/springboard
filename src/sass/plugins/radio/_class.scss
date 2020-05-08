@@ -1,10 +1,9 @@
 // Radio button
+@forward '../config';
+@forward '../modularscale/index';
 
-// Variables
-$radio-size: 1em !default;
-$radio-border: 1px solid #aaa !default;
-$primary: royalblue !default;
-$transition: all .3s !default;
+@use '../config' as *;
+@use '../modularscale/index' as *;
 
 // 
 %radio {

@@ -1,11 +1,8 @@
-// Variables
-$white: #fff !default;
-$primary: royalblue !default;
-$success: green !default;
-$warning: goldenrod !default;
-$error: red !default;
-$dull: gray !default;
-$table-stripe: rgba(0, 0, 0, .05) !default;
+@forward '../config';
+@forward '../modularscale/index';
+
+@use '../config' as *;
+@use '../modularscale/index' as *;
 
 
 table {

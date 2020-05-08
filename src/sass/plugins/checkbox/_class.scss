@@ -1,10 +1,9 @@
 // Checkbox
+@forward '../config';
+@forward '../modularscale/index';
 
-// Variables
-$black: #000 !default;
-$radius: 0 !default;
-$checkbox-character: '\2714' !default;
-$checkbox-radius: $radius !default;
+@use '../config' as *;
+@use '../modularscale/index' as *;
 
 // Import radio placeholder
 @use '../radio/plugin' as *; // transition is used

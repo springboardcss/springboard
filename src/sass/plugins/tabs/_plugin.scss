@@ -1,4 +1,4 @@
-@import "class";
+@use "class" as *;
 
 .tabs {
   @extend %tabs;

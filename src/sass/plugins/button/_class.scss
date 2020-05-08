@@ -1,18 +1,11 @@
 // %button
 // This class defines a clickable element that looks like a label
-@use '../label/plugin';
+@forward '../config';
+@forward '../modularscale/index';
 
-// Variables
-// $margin: 0 !default;
-// $padding: 0 !default;
-$black: #000 !default;
-$white: #fff !default;
-$transparency: .9 !default;
-$hover: inset 0 0 0 99em rgba($white, $transparency) !default;
-$click: inset 0 0 0 99em rgba($black, $transparency) !default;
-$pseudo-hover: inset 0 0 0 99em rgba($black, $transparency / 2) !default;
-$transition: all 0.3s !default;
-$radius: 0 !default;
+@use '../config' as *;
+@use '../modularscale/index' as *;
+@use '../label/plugin' as *;
 
 // Definition
 %button {
@@ -33,19 +26,19 @@ $radius: 0 !default;
   // Methods
   &:hover,
   &:focus {
-    box-shadow: $hover;
+    box-shadow: $button-hover;
     border: 0;
     }
 
   &.pseudo:hover,
   &.pseudo:focus {
-    box-shadow: $pseudo-hover;
+    box-shadow: $button-pseudo-hover;
     }
 
   &.active,
   &:active,
   &.pseudo:active {
-    box-shadow: $click;
+    box-shadow: $button-click;
     }
 
   &[disabled] {

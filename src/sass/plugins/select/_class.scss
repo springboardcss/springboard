@@ -1,12 +1,10 @@
 // Variables
 // $height: 2.2em !default;
-$height: 0 !default;
-$margin: var(--seperation-least) !default;
-$padding: var(--seperation-least) var(--seperation-less) !default;
-$primary: royalblue !default;
-$black: #000 !default;
-$border: 1px solid #ccc !default;
-$radius: 0 !default;
+@forward '../config';
+@forward '../modularscale/index';
+
+@use '../config' as *;
+@use '../modularscale/index' as *;
 
 // This comes from arrow.svg. Converted with:
 // http://dopiaza.org/tools/datauri/index.php
@@ -14,7 +12,7 @@ $dropimage: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvM
 
 @use '../modularscale/index' as *;
 
-@debug "height #{$height}";
+@debug "height #{$select-height}";
 
 // Code
 %select {
@@ -29,7 +27,7 @@ $dropimage: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvM
   border-radius: $radius;
   cursor: pointer;
   width: 100%;
-  @include mod(height,$height);
+  @include mod(height,$select-height);
   box-sizing: border-box;
   padding: $padding;
   transition: all 0.3s;

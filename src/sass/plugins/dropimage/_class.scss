@@ -1,3 +1,9 @@
+@forward '../config';
+@forward '../modularscale/index';
+
+@use '../config' as *;
+@use '../modularscale/index' as *;
+
 // Dropimage plugin
 // Allow to upload images in a sensible manner
 

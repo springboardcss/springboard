@@ -1,21 +1,9 @@
-@use 'class';
+@use 'class' as *; 
 
-// Inherit from the class
-$margin: 0 !default;
-$padding: 0 !default;
-$black: #000 !default;
-$white: #fff !default;
-$transparency: .9 !default;
-$hover: inset 0 0 0 99em rgba($white, $transparency) !default;
-$click: inset 0 0 0 99em rgba($black, $transparency) !default;
-$pseudo-hover: inset 0 0 0 99em rgba($black, $transparency / 2) !default;
-$transition: all 0.3s !default;
-$radius: 0 !default;
- 
 // For the toggle buttons
 :checked + .toggle,
 :checked + .toggle:hover {
-  box-shadow: $click;
+  box-shadow: $button-click;
 }
 
 // Hide the checkbox/radiobutton

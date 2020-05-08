@@ -1,8 +1,5 @@
-// Variables for the tooltips
-$black: #000;
-$tooltip-background: $black !default;
-$tooltip-size: .8em !default;
-
+@forward '../config';
+@use '../config' as *;
 @use '../label/plugin' as *;
 @use '../card/class' as *;
 

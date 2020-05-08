@@ -1,24 +1,17 @@
+@forward '../config';
+@forward '../modularscale/index';
 
-// Public Variables
-$primary: blue !default;
-$height: var(--space-most) !default;
-$bg: #fff !default;
-$radius: 0 !default;
-$transition: all .3s !default;
-$border: 1px solid #ccc !default;
-
-// Private Variables
-$padding: var(--space-least) var(--space);
-
+@use '../config' as *;
+@use '../modularscale/index' as *;
 
 // Top level selector
 %input {
   line-height: 1.5;
   margin: 0;
-  height: $height;
+  height: $input-height;
   padding: $padding;
   border: $border;
-  background-color: $bg;
+  background-color: $input-bg;
   border-radius: $radius;
   transition: $transition;
   width: 100%;

@@ -1,12 +1,7 @@
-$color: #000 !default;
-$link-color: inherit !default;
-$shadow-color: #000 !default;
-$bg: #fff !default;
-$radius: 0 !default;
-$transition: all 0.3s !default;
-$font-family: Arial, Helvetica, sans-serif;
-$class-name: "" !default;
+@forward '../config';
+@forward '../modularscale/index';
 
+@use '../config' as *;
 @use '../modularscale/index' as *;
 
 #{$class-name} * {
@@ -22,9 +17,9 @@ $class-name: "" !default;
 }
 
 #{$class-name} body {
-  color: $color;
+  color: $generic-color;
   line-height: 1.75;
-  background: $bg;
+  background: $generic-bg;
 }
 
 main {
@@ -46,7 +41,7 @@ main {
 }
 
 #{$class-name} a {
-  color: $color;
+  color: $generic-color;
   text-decoration: none;
   box-shadow: none;
   transition: $transition;
@@ -75,7 +70,7 @@ main {
 #{$class-name} blockquote {
   padding: 0 0 0 1em;
   margin: 0 0 0 .1em;
-  box-shadow: inset 5px 0 rgba($shadow-color, .3);
+  box-shadow: inset 5px 0 rgba($generic-shadow-color, .3);
 }
 
 #{$class-name} label {

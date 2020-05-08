@@ -1,5 +1,5 @@
 // Get the checkbox definition
-@import 'class';
+@use 'class' as *;
 
 // Define it for the element checkbox
 [type=checkbox] {

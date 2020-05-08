@@ -1,19 +1,10 @@
 // Card
 // This represents a self-contained, replicable entity
+@forward '../config';
+@forward '../modularscale/index';
 
-// Variables
-$radius: 0 !default;
-$border: 1px solid #ccc !default;
-$white: #fff;
-$error: red;
-$card-shadow: 0 !default;
-$card-border: $border !default;
-$card-radius: $radius !default;
-
-
-
-// Styles
-
+@use '../config' as *;
+@use '../modularscale/index' as *;
 // http://8gramgorilla.com/mastering-sass-extends-and-placeholders/
 %card {
 

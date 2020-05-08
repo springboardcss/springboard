@@ -559,7 +559,7 @@ i[class*=" icon-"]:before {
   text-align: center;
   letter-spacing: inherit;
   margin: 0;
-  padding: var(--seperation-least) var(--seperation);
+  padding: var(--space-least) var(--space-less);
   vertical-align: middle;
   background: #0074d9;
   color: #fff;
@@ -633,7 +633,7 @@ button:hover,
 [type=submit]:hover, button:focus,
 .button:focus,
 [type=submit]:focus {
-  box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.2);
   border: 0;
 }
 button.pseudo:hover,
@@ -641,14 +641,14 @@ button.pseudo:hover,
 .pseudo[type=submit]:hover, button.pseudo:focus,
 .pseudo.button:focus,
 .pseudo[type=submit]:focus {
-  box-shadow: inset 0 0 0 99em rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.1);
 }
 button.active,
 .active.button,
 .active[type=submit], button:active,
 .button:active,
 [type=submit]:active {
-  box-shadow: inset 0 0 0 99em rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.2);
 }
 button[disabled],
 [disabled].button,
@@ -660,11 +660,11 @@ button[disabled],
 
 :checked + .toggle,
 :checked + .toggle:hover {
-  box-shadow: inset 0 0 0 99em rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.2);
 }
 
 [type] + .toggle {
-  padding: 0;
+  padding: var(--space-least) var(--space-less);
   margin-right: 0;
 }
 [type] + .toggle:after, [type] + .toggle:before {
@@ -677,7 +677,7 @@ textarea,
   line-height: 1.5;
   margin: 0;
   height: var(--space-most);
-  padding: var(--space-least) var(--space);
+  padding: var(--space-least) var(--space-less);
   border: 1px solid #ccc;
   background-color: #fff;
   border-radius: 0;
@@ -713,7 +713,7 @@ select {
   width: 100%;
   height: 14px;
   box-sizing: border-box;
-  padding: var(--seperation-least) var(--seperation-less);
+  padding: var(--space-least) var(--space-less);
   transition: all 0.3s;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -738,12 +738,12 @@ select::-ms-expand {
   display: none;
 }
 select:focus, select:active {
-  border: 1px solid royalblue;
+  border: 1px solid #0074d9;
   transition: outline 0s;
 }
 select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #000;
+  text-shadow: 0 0 0 #111;
 }
 select option {
   padding: var(--seperation-less);
@@ -754,22 +754,22 @@ select[multiple] {
   padding: 0;
 }
 
-[type=radio] {
+[type=radio], [type=checkbox] {
   opacity: 0;
   width: 0;
   position: absolute;
   display: inline-block;
 }
-[type=radio] + .checkable:hover:before, [type=radio]:focus + .checkable:before {
-  border: 1px solid royalblue;
+[type=radio] + .checkable:hover:before, [type=checkbox] + .checkable:hover:before, [type=radio]:focus + .checkable:before, [type=checkbox]:focus + .checkable:before {
+  border: 1px solid #0074d9;
 }
-[type=radio] + .checkable {
+[type=radio] + .checkable, [type=checkbox] + .checkable {
   position: relative;
   cursor: pointer;
   padding-left: 1.5em;
   margin-right: 0.6em;
 }
-[type=radio] + .checkable:before, [type=radio] + .checkable:after {
+[type=radio] + .checkable:before, [type=checkbox] + .checkable:before, [type=radio] + .checkable:after, [type=checkbox] + .checkable:after {
   content: "";
   position: absolute;
   display: inline-block;
@@ -787,56 +787,10 @@ select[multiple] {
   border-radius: 50%;
   transition: all 0.3s;
 }
-[type=radio] + .checkable:before {
-  border: 1px solid #aaa;
+[type=radio] + .checkable:before, [type=checkbox] + .checkable:before {
+  border: 1px solid #ccc;
 }
-[type=radio]:checked + .checkable:after {
-  background: #555;
-  transform: scale(0.5) translateY(-100%);
-}
-
-[type=checkbox], [type=radio] {
-  opacity: 0;
-  width: 0;
-  position: absolute;
-  display: inline-block;
-}
-
-[type=checkbox] + .checkable:hover:before, [type=radio] + .checkable:hover:before, [type=checkbox]:focus + .checkable:before, [type=radio]:focus + .checkable:before {
-  border: 1px solid royalblue;
-}
-
-[type=checkbox] + .checkable, [type=radio] + .checkable {
-  position: relative;
-  cursor: pointer;
-  padding-left: 1.5em;
-  margin-right: 0.6em;
-}
-
-[type=checkbox] + .checkable:before, [type=radio] + .checkable:before, [type=checkbox] + .checkable:after, [type=radio] + .checkable:after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1em;
-  line-height: 1em;
-  color: transparent;
-  font-family: sans;
-  text-align: center;
-  box-sizing: border-box;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  transition: all 0.3s;
-}
-
-[type=checkbox] + .checkable:before, [type=radio] + .checkable:before {
-  border: 1px solid #aaa;
-}
-
-[type=checkbox]:checked + .checkable:after, [type=radio]:checked + .checkable:after {
+[type=radio]:checked + .checkable:after, [type=checkbox]:checked + .checkable:after {
   background: #555;
   transform: scale(0.5) translateY(-100%);
 }
@@ -852,7 +806,7 @@ select[multiple] {
   opacity: 0;
 }
 [type=checkbox]:checked + .checkable:after {
-  color: #000;
+  color: #111;
   background: none;
   transform: translateY(-50%);
   transition: all 0.3s;
@@ -873,23 +827,23 @@ th {
   text-align: left;
   font-weight: 900;
   color: #fff;
-  background-color: royalblue;
+  background-color: #0074d9;
 }
 
 .success th {
-  background-color: green;
+  background-color: #2ecc40;
 }
 
 .warning th {
-  background-color: goldenrod;
+  background-color: #ff851b;
 }
 
 .error th {
-  background-color: red;
+  background-color: #ff4136;
 }
 
 .dull th {
-  background-color: gray;
+  background-color: #aaa;
 }
 
 tr:nth-child(even) {
@@ -899,8 +853,8 @@ tr:nth-child(even) {
 .flex {
   display: -ms-flexbox;
   display: flex;
-  margin-left: calc(var(--seperation) * -1);
-  width: calc(100% + var(--seperation));
+  margin-left: calc(0 * -1);
+  width: calc(100% + 0);
   flex-wrap: wrap;
   transition: all 0.3s ease;
 }
@@ -909,8 +863,8 @@ tr:nth-child(even) {
   box-sizing: border-box;
   flex: 1 1 auto;
   /* Default for IE10 bug */
-  padding-left: var(--seperation);
-  padding-bottom: var(--seperation);
+  padding-left: 0;
+  padding-bottom: 0;
 }
 .flex > *:last-child {
   padding-bottom: 0;
@@ -3556,7 +3510,7 @@ nav {
   height: 3em;
   padding: 0 0.6em;
   background: #fff;
-  box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.2em rgba(17, 17, 17, 0.2);
   z-index: 10000;
   transition: all 0.3s;
   transform-style: preserve-3d;
@@ -3713,10 +3667,10 @@ textarea.stack:focus + select,
 select.stack:focus + input,
 select.stack:focus + textarea,
 select.stack:focus + select {
-  border-top-color: royalblue;
+  border-top-color: #0074d9;
 }
 
-.card {
+.modal .overlay ~ *, .card {
   position: relative;
   box-shadow: 0;
   border-radius: 0;
@@ -3728,41 +3682,48 @@ select.stack:focus + select {
   padding: 0;
   transition: all 0.3s ease;
 }
-.hidden.card, :checked + .card {
+.modal .overlay ~ .hidden, .hidden.card, .modal .overlay ~ :checked + *, .modal .overlay:checked + *, :checked + .card {
   padding: 0;
   margin: 0;
   border: 0;
 }
-.card > * {
+.modal .overlay ~ * > *, .card > * {
   max-width: 100%;
   display: block;
 }
-.card > *:last-child {
+.modal .overlay ~ * > *:last-child, .card > *:last-child {
   margin-bottom: 0;
 }
-.card header,
+.modal .overlay ~ * header, .card header,
+.modal .overlay ~ * section,
 .card section,
+.modal .overlay ~ * > p,
 .card > p {
   padding: 0.6em 0.8em;
 }
-.card section {
+.modal .overlay ~ * section, .card section {
   padding: 0.6em 0.8em 0;
 }
-.card hr {
+.modal .overlay ~ * hr, .card hr {
   border: none;
   height: 1px;
   background-color: #eee;
 }
-.card header {
+.modal .overlay ~ * header, .card header {
   font-weight: bold;
   position: relative;
   border-bottom: 1px solid #eee;
 }
-.card header h1,
+.modal .overlay ~ * header h1, .card header h1,
+.modal .overlay ~ * header h2,
 .card header h2,
+.modal .overlay ~ * header h3,
 .card header h3,
+.modal .overlay ~ * header h4,
 .card header h4,
+.modal .overlay ~ * header h5,
 .card header h5,
+.modal .overlay ~ * header h6,
 .card header h6 {
   padding: 0;
   margin: 0 2em 0 0;
@@ -3770,26 +3731,26 @@ select.stack:focus + select {
   display: inline-block;
   vertical-align: text-bottom;
 }
-.card header:last-child {
+.modal .overlay ~ * header:last-child, .card header:last-child {
   border-bottom: 0;
 }
-.card footer {
+.modal .overlay ~ * footer, .card footer {
   padding: 0.8em;
 }
-.card p {
+.modal .overlay ~ * p, .card p {
   margin: var(--seperation-least) 0;
 }
-.card p:first-child {
+.modal .overlay ~ * p:first-child, .card p:first-child {
   margin-top: 0;
 }
-.card p:last-child {
+.modal .overlay ~ * p:last-child, .card p:last-child {
   margin-bottom: 0;
 }
-.card > p {
+.modal .overlay ~ * > p, .card > p {
   margin: 0;
   padding-right: 2.5em;
 }
-.card .close {
+.modal .overlay ~ * .close, .card .close {
   position: absolute;
   top: 0.4em;
   right: 0.3em;
@@ -3797,112 +3758,17 @@ select.stack:focus + select {
   cursor: pointer;
   width: auto;
 }
-.card .close:hover {
-  color: red;
+.modal .overlay ~ * .close:hover, .card .close:hover {
+  color: #ff4136;
 }
-.card h1 + .close {
+.modal .overlay ~ * h1 + .close, .card h1 + .close {
   margin: 0.2em;
 }
-.card h2 + .close {
+.modal .overlay ~ * h2 + .close, .card h2 + .close {
   margin: 0.1em;
 }
-.card .dangerous {
-  background: red;
-  float: right;
-}
-
-.modal .overlay ~ * {
-  position: relative;
-  box-shadow: 0;
-  border-radius: 0;
-  border: 1px solid #ccc;
-  overflow: hidden;
-  text-align: left;
-  background: #fff;
-  margin-bottom: var(--seperation);
-  padding: 0;
-  transition: all 0.3s ease;
-}
-.modal .overlay ~ .hidden, .modal .overlay ~ :checked + *, .modal .overlay:checked + * {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-.modal .overlay ~ * > * {
-  max-width: 100%;
-  display: block;
-}
-.modal .overlay ~ * > *:last-child {
-  margin-bottom: 0;
-}
-.modal .overlay ~ * header,
-.modal .overlay ~ * section,
-.modal .overlay ~ * > p {
-  padding: 0.6em 0.8em;
-}
-.modal .overlay ~ * section {
-  padding: 0.6em 0.8em 0;
-}
-.modal .overlay ~ * hr {
-  border: none;
-  height: 1px;
-  background-color: #eee;
-}
-.modal .overlay ~ * header {
-  font-weight: bold;
-  position: relative;
-  border-bottom: 1px solid #eee;
-}
-.modal .overlay ~ * header h1,
-.modal .overlay ~ * header h2,
-.modal .overlay ~ * header h3,
-.modal .overlay ~ * header h4,
-.modal .overlay ~ * header h5,
-.modal .overlay ~ * header h6 {
-  padding: 0;
-  margin: 0 2em 0 0;
-  line-height: 1;
-  display: inline-block;
-  vertical-align: text-bottom;
-}
-.modal .overlay ~ * header:last-child {
-  border-bottom: 0;
-}
-.modal .overlay ~ * footer {
-  padding: 0.8em;
-}
-.modal .overlay ~ * p {
-  margin: var(--seperation-least) 0;
-}
-.modal .overlay ~ * p:first-child {
-  margin-top: 0;
-}
-.modal .overlay ~ * p:last-child {
-  margin-bottom: 0;
-}
-.modal .overlay ~ * > p {
-  margin: 0;
-  padding-right: 2.5em;
-}
-.modal .overlay ~ * .close {
-  position: absolute;
-  top: 0.4em;
-  right: 0.3em;
-  padding: 0 0.5em;
-  cursor: pointer;
-  width: auto;
-}
-.modal .overlay ~ * .close:hover {
-  color: red;
-}
-.modal .overlay ~ * h1 + .close {
-  margin: 0.2em;
-}
-.modal .overlay ~ * h2 + .close {
-  margin: 0.1em;
-}
-.modal .overlay ~ * .dangerous {
-  background: red;
+.modal .overlay ~ * .dangerous, .card .dangerous {
+  background: #ff4136;
   float: right;
 }
 
@@ -3925,8 +3791,8 @@ select.stack:focus + select {
   position: fixed;
   margin: 0;
   border-radius: 0;
-  background: rgba(0, 0, 0, 0.6);
-  transition: 0.5s;
+  background: rgba(17, 17, 17, 0.6);
+  transition: all 0.3s;
   z-index: 100000;
 }
 .modal .overlay:before, .modal .overlay:after {
@@ -3939,13 +3805,13 @@ select.stack:focus + select {
   left: 50%;
   transform: translateX(-50%) translateY(-50%) scale(0.2, 0.2);
   z-index: 1000000;
-  transition: 0.5s;
+  transition: all 0.3s;
 }
 .modal > input:checked ~ * {
   display: block;
   opacity: 1;
   max-height: 10000px;
-  transition: 0.5s;
+  transition: all 0.3s;
 }
 .modal > input:checked ~ .overlay ~ * {
   max-height: 90%;
@@ -4061,7 +3927,7 @@ select.stack:focus + select {
 [data-tooltip]:after {
   margin-left: 0;
   font-size: 0.8em;
-  background: #000;
+  background: #111;
   content: attr(data-tooltip);
   white-space: nowrap;
 }
@@ -4071,7 +3937,7 @@ select.stack:focus + select {
   height: 0;
   border-width: 0;
   border-style: solid;
-  border-color: transparent transparent #000;
+  border-color: transparent transparent #111;
   margin-top: 0;
   left: 10px;
 }
@@ -4091,7 +3957,7 @@ select.stack:focus + select {
   margin-bottom: 12px;
 }
 .tooltip-top:before {
-  border-color: #000 transparent transparent;
+  border-color: #111 transparent transparent;
   margin-bottom: 0;
   left: 10px;
 }
@@ -4103,7 +3969,7 @@ select.stack:focus + select {
   top: 0;
 }
 .tooltip-right:before {
-  border-color: transparent #000 transparent transparent;
+  border-color: transparent #111 transparent transparent;
   margin-left: -6px;
   left: 100%;
   top: 7px;
@@ -4117,7 +3983,7 @@ select.stack:focus + select {
   top: 0;
 }
 .tooltip-left:before {
-  border-color: transparent transparent transparent #000;
+  border-color: transparent transparent transparent #111;
   margin-right: -6px;
   right: 100%;
   top: 7px;

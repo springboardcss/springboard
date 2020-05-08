@@ -1,14 +1,8 @@
-// Navigation bar
-$black: #000 !default;
-$transparency: .2 !default;
-$shadow: 0 0 .2em rgba($black, $transparency) !default;
-$nav-height: 3em !default;
-$nav-shadow: $shadow !default;
-$nav-position: fixed !default;
-$nav-sides: .6em !default;
-$nav-responsive: true !default;
-$nav-open-left: false !default;
-$nav-timing: .5s !default;
+@forward '../config';
+@forward '../modularscale/index';
+
+@use '../config' as *;
+@use '../modularscale/index' as *;
 
 // Vertical align based on
 // http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/

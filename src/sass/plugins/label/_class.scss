@@ -1,13 +1,8 @@
-// Label of text
-$radius: 0 !default;
-$primary: royalblue !default;
-$white: #fff !default;
-$success: green !default;
-$warning: goldenrod !default;
-$error: red !default;
-$radius: $radius !default;
+@forward '../config';
+@forward '../modularscale/index';
 
-$padding: var(--seperation-least) var(--seperation);
+@use '../config' as *;
+@use '../modularscale/index' as *;
 
 // Styles
 %label {

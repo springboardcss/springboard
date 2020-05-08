@@ -1,9 +1,8 @@
-// Variables
-$transparency: .2 !default;
-$black: #000 !default;
-$breakpoint: 60rem !default;
-$transition: 0.5s !default;
+@forward '../config';
+@forward '../modularscale/index';
 
+@use '../config' as *;
+@use '../modularscale/index' as *;
 @use '../card/class' as *;
 
 .modal {
