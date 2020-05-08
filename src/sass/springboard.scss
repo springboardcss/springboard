@@ -11,6 +11,7 @@
 // Generic styles for things like <body>, <a> and others
 // It also overwrites normalize.css a bit
 @use './plugins/generic/plugin' as generic;
+@use './plugins/headings/plugin' as headings;
 
 @use 'breakpoint-sass/stylesheets/breakpoint' as *;
 

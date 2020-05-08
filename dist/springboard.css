@@ -168,6 +168,62 @@ label {
   cursor: pointer;
 }
 
+h1 {
+  color: #111;
+  padding-top: 18.2px;
+  padding-bottom: 14px;
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  h1 {
+    padding-top: calc( 18.2px + 2.6 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  h1 {
+    padding-top: calc( 20.8px + 5.2 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    padding-top: 26px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  h1 {
+    padding-bottom: calc( 14px + 2 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  h1 {
+    padding-bottom: calc( 16px + 4 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    padding-bottom: 20px;
+  }
+}
+
+h1 {
+  font-size: 39.9854px;
+  line-height: 1;
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  h1 {
+    font-size: calc( 39.9854px + 5.7122 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  h1 {
+    font-size: calc( 45.6976px + 11.4244 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 57.122px;
+  }
+}
+
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
