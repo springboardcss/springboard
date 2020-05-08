@@ -3,27 +3,7 @@
 
 @use '../config' as *;
 @use '../modularscale/index' as *;
-
-// Dropimage plugin
-// Allow to upload images in a sensible manner
-
-
-// Variables
-
-// The ratio for the images (responsive by default)
-$sb-dropimage-ratio: 16 / 9 !default;
-
-// The percentage of height (respect of width)
-$sb-dropimage-height: percentage(1 / $sb-dropimage-ratio) !default;
-
-$sb-dropimage-background-color: #ddd !default;
-
-// This comes from camera.svg. Converted with:
-// http://dopiaza.org/tools/datauri/index.php
-$sb-dropimage-background-image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iNjQwIiB2ZXJzaW9uPSIxLjEiPjxnIHN0eWxlPSJmaWxsOiMzMzMiPjxwYXRoIGQ9Ik0gMTg3IDIzMCBDIDE3NSAyMzAgMTY1IDI0MCAxNjUgMjUyIEwgMTY1IDMwMCBMIDE2NSA0MDggQyAxNjUgNDIwIDE3NSA0MzAgMTg3IDQzMCBMIDQ2MyA0MzAgQyA0NzUgNDMwIDQ4NSA0MjAgNDg1IDQwOCBMIDQ4NSAzMDAgTCA0ODUgMjUyIEMgNDg1IDI0MCA0NzUgMjMwIDQ2MyAyMzAgTCAxODcgMjMwIHogTSAzNjAgMjU2IEEgNzAgNzIgMCAwIDEgNDMwIDMyOCBBIDcwIDcyIDAgMCAxIDM2MCA0MDAgQSA3MCA3MiAwIDAgMSAyOTAgMzI4IEEgNzAgNzIgMCAwIDEgMzYwIDI1NiB6Ii8+PGNpcmNsZSBjeD0iMzYwIiBjeT0iMzMwIiByPSI0MSIvPjxwYXRoIGQ9Im0yMDUgMjI1IDUtMTAgMjAgMCA1IDEwLTMwIDAiLz48cGF0aCBkPSJNMjg1IDIwMEwyNzAgMjI1IDM3NiAyMjUgMzYxIDIwMCAyODUgMjAwek0zMTAgMjA1TDMzNyAyMDUgMzM3IDIxOCAzMTAgMjE4IDMxMCAyMDV6Ii8+PHBhdGggZD0ibTQwNSAyMjUgNS0xMCAyMCAwIDUgMTAtMzAgMCIvPjwvZz48L3N2Zz4=' !default;
-
-$sb-dropimage-radius: $sb-button-radius !default;
-$sb-dropimage-margin: $sb-button-margin !default;
+@use '../button/plugin' as *;
 
 
 // Styles
@@ -38,17 +18,17 @@ $sb-dropimage-margin: $sb-button-margin !default;
   display: block;
   padding: 0;
   // Hack from http://stackoverflow.com/a/13976732/938236
-  padding-bottom: $sb-dropimage-height;
+  padding-bottom: $dropimage-height;
   overflow: hidden;
   cursor: pointer;
   border: 0;
-  margin: $sb-dropimage-margin;
-  border-radius: $sb-dropimage-radius;
+  margin: $dropimage-margin;
+  border-radius: $dropimage-radius;
 
-  background-color: $sb-dropimage-background-color;
+  background-color: $dropimage-background-color;
   background-size: cover;
   background-position: center center;
-  background-image: url(#{$sb-dropimage-background-image});
+  background-image: url(#{$dropimage-background-image});
 
   // Subelements
   input {

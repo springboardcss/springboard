@@ -41,6 +41,6 @@
 @use './plugins/card/plugin';
 @use './plugins/modal/plugin' as modal;
 
-// @use './plugins/dropimage/plugin';
+@use './plugins/dropimage/plugin' as dropimage;
 @use './plugins/tabs/plugin' as tabs;
 @use './plugins/tooltip/plugin' as tooltip;
