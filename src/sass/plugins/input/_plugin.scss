@@ -1,7 +1,7 @@
 // Input
 // Handle the writing of text and some other user-generated content
 
-@import 'class';
+@use 'class' as *;
 
 
 // Browser treats unknow type as "text", so we'll do the same

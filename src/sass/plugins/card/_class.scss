@@ -1,32 +1,27 @@
 // Card
 // This represents a self-contained, replicable entity
+@forward '../config';
+@forward '../modularscale/index';
 
-// Variables
-$sb-card-shadow: 0 !default;
-$sb-card-border: $sb-border !default;
-$sb-card-radius: $sb-radius !default;
-
-
-
-// Styles
-
+@use '../config' as *;
+@use '../modularscale/index' as *;
 // http://8gramgorilla.com/mastering-sass-extends-and-placeholders/
 %card {
 
   position: relative;
-  box-shadow: $sb-card-shadow;
-  border-radius: $sb-card-radius;
-  border: $sb-card-border;
+  box-shadow: $card-shadow;
+  border-radius: $card-radius;
+  border: $card-border;
   overflow: hidden;
   text-align: left;
-  background: $sb-white;
+  background: $white;
   margin-bottom: var(--seperation);
   padding: 0;
   transition: all .3s ease;
 
   &.hidden,
   :checked + & {
-    font-size: 0;
+    // font-size: 0;
     padding: 0;
     margin: 0;
     border: 0;
@@ -107,13 +102,13 @@ $sb-card-radius: $sb-radius !default;
     position: absolute;
     top: .4em;
     right: .3em;
-    font-size: 1.2em;
+    // font-size: 1.2em;
     padding: 0 .5em;
     cursor: pointer;
     width: auto;
 
     &:hover {
-      color: $sb-error;
+      color: $error;
       }
     }
 
@@ -126,7 +121,7 @@ $sb-card-radius: $sb-radius !default;
     }
 
   .dangerous {
-    background: $sb-error;
+    background: $error;
     float: right;
     }
   }

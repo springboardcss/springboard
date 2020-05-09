@@ -1,7 +1,10 @@
-// Top level variables for BBQ CSS
-// Note: some others are available under each specific plugin
+// Modularscale
 
-@import 'colors';
+
+@use 'colors';
+@forward 'colors';
+
+$class-name: 'square';
 
 $modularscale: (
   base: 12px,
@@ -20,40 +23,16 @@ $modularscale: (
   ),
 );
 
-$seperation:        0;
-$seperation-least:  -2;
-$seperation-less:   -1;
-$seperation-more:   1;
-
-:root {
-    //setup seperation modular scale and save as CSS property
-    @include ms-respond(--seperation-least,$seperation-least);
-    @include ms-respond(--seperation-less,$seperation-less);
-    @include ms-respond(--seperation,$seperation);
-    @include ms-respond(--seperation-more,$seperation-more); 
-}
-
-// Colors (from /themes/default/colors)
-$sb-white: #fff;
-$sb-black: #111;
-$sb-primary: $blue;
-$sb-success: $green;
-$sb-warning: $orange;
-$sb-error: $red;
-$sb-dull: $gray;
-$sb-color-variation: 10%;
-$sb-transparency: .2;
-
-
-// Spaces
-$sb-separation: var(--seperation);
-$sb-breakpoint: 60em;
+$breakpoint: 60em;
 
 
 // Shapes
-$sb-radius: 0;
-$sb-border: 1px solid #ccc;
-$sb-shadow: 0 0 .2em rgba($sb-black, $sb-transparency);
+$radius: 0;
+$border: 1px solid #ccc;
+$shadow: 0 0 .2em rgba(colors.$black, colors.$transparency);
 
 // Transitions
-$sb-transition: all .3s;
+$transition: all .3s;
+
+// Select Element
+$select-height: alskdjf;

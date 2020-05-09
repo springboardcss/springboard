@@ -1,5 +1,5 @@
 // Definition of card
-@import 'class';
+@use 'class' as *; 
 
 // Implementation of card
 .card {

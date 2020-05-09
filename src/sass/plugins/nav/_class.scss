@@ -1,30 +1,26 @@
-// Navigation bar
+@forward '../config';
+@forward '../modularscale/index';
 
-$sb-nav-height: 3em !default;
-$sb-nav-shadow: $sb-shadow !default;
-$sb-nav-position: fixed !default;
-$sb-nav-sides: .6em !default;
-$sb-nav-responsive: true !default;
-$sb-nav-open-left: false !default;
-$sb-nav-timing: .5s !default;
+@use '../config' as *;
+@use '../modularscale/index' as *;
 
 // Vertical align based on
 // http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
 %nav {
 
   // Position it on the top, full width
-  position: $sb-nav-position;
+  position: $nav-position;
   top: 0;
   left: 0;
   right: 0;
 
   // Total height
-  height: $sb-nav-height;
-  padding: 0 $sb-nav-sides;
+  height: $nav-height;
+  padding: 0 $nav-sides;
 
   // Make it look like a hovering bar
   background: #fff;
-  box-shadow: $sb-nav-shadow;
+  box-shadow: $nav-shadow;
   z-index: 10000;
 
   // Everything happens slow-ish
@@ -48,7 +44,7 @@ $sb-nav-timing: .5s !default;
   .brand {
     font-weight: 700;
     float: left;
-    padding: 0 $sb-nav-sides;
+    padding: 0 $nav-sides;
     max-width: 50%;
     white-space: nowrap;
     color: inherit;
@@ -70,6 +66,6 @@ $sb-nav-timing: .5s !default;
   }
 
   .menu > * {
-    margin-right: $sb-nav-sides;
+    margin-right: $nav-sides;
   }
 }

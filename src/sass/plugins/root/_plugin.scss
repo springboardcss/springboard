@@ -1,0 +1,11 @@
+@use '../config' as *;
+@use '../modularscale/index' as *;
+
+:root {
+  //setup space modular scale and save as CSS property
+  @include mod(--space-least,$space-least);
+  @include mod(--space-less,$space-less);
+  @include mod(--space,$space);
+  @include mod(--space-more,$space-more);
+  @include mod(--space-most,$space-most);
+}

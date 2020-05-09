@@ -1,17 +1,15 @@
-// Inherit from the class
-@import 'class';
-
+@use 'class' as *; 
 
 // For the toggle buttons
 :checked + .toggle,
 :checked + .toggle:hover {
-  box-shadow: $sb-button-click;
+  box-shadow: $button-click;
 }
 
 // Hide the checkbox/radiobutton
 // Handle with care
 [type] + .toggle {
-  padding: $sb-button-padding;
+  padding: $padding;
   margin-right: 0;
 
   &:after,

@@ -1,16 +1,25 @@
 // Navigation bar
 @import 'class';
 
+$breakpoint: 60rem !default;
+$nav-open-left: true !default;
+$white: #fff !default;
+$nav-responsive: true !default;
+$nav-timing: 0.5s !default;
+$black: #000 !default;
+$transparency: .2 !default;
+$shadow: 0 0 .2em rgba($black, $transparency) !default;
+
 nav {
   @extend %nav;
 }
 
-@if $sb-nav-responsive {
+@if $nav-responsive {
   nav .burger {
     display: none;
   }
 
-  @media all and (max-width: $sb-breakpoint) {
+  @media all and (max-width: $breakpoint) {
 
     nav {
       .burger {
@@ -26,7 +35,7 @@ nav {
         min-height: 100%;
         top: 0;
 
-        @if $sb-nav-open-left{
+        @if $nav-open-left{
           left: 0;
         }
         @else{
@@ -35,8 +44,8 @@ nav {
 
         bottom: -1000em;
         margin: 0;
-        background: $sb-white;
-        transition: all $sb-nav-timing ease;
+        background: $white;
+        transition: all $nav-timing ease;
         transform: none;
       }
 
@@ -49,7 +58,7 @@ nav {
         width: 100%;
         border-radius: 0;
         background: rgba(0, 0, 0, .2);
-        transition: all $sb-nav-timing ease;
+        transition: all $nav-timing ease;
       }
 
 
@@ -60,7 +69,7 @@ nav {
         max-width: 300px;
         // max-width: 0;
         transform-origin: center right;
-        transition: all $sb-nav-timing / 2 ease;
+        transition: all $nav-timing / 2 ease;
 
         // opacity: 0;
         // width: 0;
@@ -68,27 +77,27 @@ nav {
 
         & > * {
           transform: translateX(100%);
-          transition: all 0s ease $sb-nav-timing;
+          transition: all 0s ease $nav-timing;
         }
       }
 
       .show:checked ~ .menu > *:nth-child(1) {
-        transition: all $sb-nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+        transition: all $nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
       }
       .show:checked ~ .menu > *:nth-child(2) {
-        transition: all $sb-nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $sb-nav-timing * 0.2;
+        transition: all $nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $nav-timing * 0.2;
       }
       .show:checked ~ .menu > *:nth-child(3) {
-        transition: all $sb-nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $sb-nav-timing * 0.4;
+        transition: all $nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $nav-timing * 0.4;
       }
       .show:checked ~ .menu > *:nth-child(4) {
-        transition: all $sb-nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $sb-nav-timing * 0.6;
+        transition: all $nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $nav-timing * 0.6;
       }
       .show:checked ~ .menu > *:nth-child(5) {
-        transition: all $sb-nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $sb-nav-timing * 0.8;
+        transition: all $nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $nav-timing * 0.8;
       }
       .show:checked ~ .menu > *:nth-child(6) {
-        transition: all $sb-nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $sb-nav-timing * 1;
+        transition: all $nav-timing cubic-bezier(0.645, 0.045, 0.355, 1) $nav-timing * 1;
       }
 
       .show:checked ~ .menu {
@@ -98,7 +107,7 @@ nav {
 
         & > * {
           transform: translateX(0);
-          transition: all $sb-nav-timing ease-in-out $sb-nav-timing * 1.2;
+          transition: all $nav-timing ease-in-out $nav-timing * 1.2;
         }
       }
 

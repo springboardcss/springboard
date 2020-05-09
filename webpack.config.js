@@ -31,6 +31,7 @@ module.exports = env => {
                 sassOptions: {
                   outputStyle: style, // figure out how to make this conditional Node env?
                   sourceComments: false,
+                  includePaths: ['node_modules']
                 },
               },
             },

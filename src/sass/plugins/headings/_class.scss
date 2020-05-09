@@ -1,0 +1,41 @@
+@forward '../config';
+@forward '../modularscale/index';
+
+@use '../config' as *;
+@use '../modularscale/index' as *;
+
+%heading {
+  color: $heading-color;
+  @include mod(padding-top,$heading-padding-top);
+  @include mod(padding-bottom,$heading-padding-bottom);
+}
+
+%h1 {
+  @include mod(font-size, $h1-font-size);
+  line-height: 1;
+}
+
+%h2 {
+  @include mod(font-size, $h2-font-size);
+  line-height: 1;
+}
+
+%h3 {
+  @include mod(font-size, $h3-font-size);
+  line-height: 1;
+}
+
+%h4 {
+  @include mod(font-size, $h4-font-size);
+  line-height: 1;
+}
+
+%h5 {
+  @include mod(font-size, $h5-font-size);
+  line-height: 1;
+}
+
+%h6 {
+  @include mod(font-size, $h6-font-size);
+  line-height: 1;
+}

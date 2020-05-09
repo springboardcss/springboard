@@ -1,19 +1,22 @@
 // Checkbox
+@forward '../config';
+@forward '../modularscale/index';
 
-// Variables
-$sb-checkbox-character: '\2714' !default;
-$sb-checkbox-radius: $sb-radius !default;
+@use '../config' as *;
+@use '../modularscale/index' as *;
 
+// Import radio placeholder
+@use '../radio/plugin' as *; // transition is used
 
 %checkbox {
   @extend %radio;
   
   + .checkable:before {
-    border-radius: $sb-checkbox-radius;
+    border-radius: $checkbox-radius;
     }
 
   + .checkable:after {
-    content: $sb-checkbox-character;
+    content: $checkbox-character;
     background: none;
     transform: scale(2) translateY(-25%);
     visibility: hidden;
@@ -21,10 +24,10 @@ $sb-checkbox-radius: $sb-radius !default;
     }
 
   &:checked + .checkable:after {
-    color: $sb-black;
+    color: $black;
     background: none;
     transform: translateY(-50%);
-    transition: $sb-transition;
+    transition: $transition;
     visibility: visible;
     opacity: 1;
     }
