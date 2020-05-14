@@ -16,8 +16,8 @@ $ms: (
 ) !default;
 
 @forward 'mathsass/dist/functions/pow';
-@use 'mathsass/dist/math' as *;
-@use 'modularscale-sass/stylesheets/modularscale' as *;
+@import 'modularscale-sass/stylesheets/modularscale';
+@import 'mathsass';
 
 @mixin mod($name,$scale) {
   @include ms-respond($name,$scale,$ms);
