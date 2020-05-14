@@ -16,7 +16,7 @@ $ms: (
 ) !default;
 
 @forward 'mathsass/dist/functions/pow';
-@use 'mathsass/dist/functions/pow' as *;
+@use 'mathsass/dist/math' as *;
 @use 'modularscale-sass/stylesheets/modularscale' as *;
 
 @mixin mod($name,$scale) {
