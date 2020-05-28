@@ -6,7 +6,7 @@
   --space:14px;
   --space-more:18.2px;
   --space-most:23.66px;
-  --space-max:23.66px;
+  --space-max:39.9854px;
 }
 @media (min-width: 500px) and (max-width: 1000px) {
   :root {
@@ -100,17 +100,17 @@
 }
 @media (min-width: 500px) and (max-width: 1000px) {
   :root {
-    --space-max:calc( 23.66px + 3.38 * ( ( 100vw - 500px) / 500 ) );
+    --space-max:calc( 39.9854px + 5.7122 * ( ( 100vw - 500px) / 500 ) );
   }
 }
 @media (min-width: 1000px) and (max-width: 1200px) {
   :root {
-    --space-max:calc( 27.04px + 6.76 * ( ( 100vw - 1000px) / 200 ) );
+    --space-max:calc( 45.6976px + 11.4244 * ( ( 100vw - 1000px) / 200 ) );
   }
 }
 @media (min-width: 1200px) {
   :root {
-    --space-max:33.8px;
+    --space-max:57.122px;
   }
 }
 
