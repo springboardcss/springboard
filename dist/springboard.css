@@ -82,6 +82,46 @@
   }
 }
 
+.p-least {
+  padding: var(--space-least);
+}
+
+.p-less {
+  padding: var(--space-less);
+}
+
+.p-normal {
+  padding: var(--space);
+}
+
+.p-more {
+  padding: var(--space-more);
+}
+
+.p-most {
+  padding: var(--space-most);
+}
+
+.m-least {
+  margin: var(--space-least);
+}
+
+.m-less {
+  margin: var(--space-less);
+}
+
+.m-normal {
+  margin: var(--space);
+}
+
+.m-more {
+  margin: var(--space-more);
+}
+
+.m-most {
+  margin: var(--space-most);
+}
+
 * {
   box-sizing: inherit;
 }
