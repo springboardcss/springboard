@@ -13,10 +13,12 @@
 
 // Spacing
   $space:        0 !default;
+  $space-min:    $space - 8 !default;
   $space-least:  $space - 2 !default;
   $space-less:   $space - 1 !default;
   $space-more:   $space + 1 !default;
   $space-most:   $space + 2 !default;
+  $space-max:    $space + 2 !default;
   // $space-class-name:   ':root' !default;
 
   $spacing: var(--space) !default;

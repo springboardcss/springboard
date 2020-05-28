@@ -3,15 +3,25 @@
 
 :root {
   //setup space modular scale and save as CSS property
+  @include mod(--space-min,$space-min);
   @include mod(--space-least,$space-least);
   @include mod(--space-less,$space-less);
   @include mod(--space,$space);
   @include mod(--space-more,$space-more);
   @include mod(--space-most,$space-most);
+  @include mod(--space-max,$space-max);
   // @include mod(margin,0.5);
 }
 
 // Padding Helpers
+.p-none {
+  padding: 0 !important;
+}
+
+.p-min {
+  padding: var(--space-min);
+}
+
 .p-least {
   padding: var(--space-least);
 }
@@ -32,7 +42,18 @@
   padding: var(--space-most);
 }
 
+.p-max {
+  padding: var(--space-max);
+}
+
 // Margin Helpers
+.m-none {
+  margin: 0 !important;
+}
+
+.m-min {
+  margin: var(--space-min);
+}
 
 .m-least {
   margin: var(--space-least);
