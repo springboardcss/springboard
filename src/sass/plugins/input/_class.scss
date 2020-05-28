@@ -8,7 +8,7 @@
 %input {
   line-height: 1.5;
   margin: 0;
-  height: $input-height;
+  // height: $input-height; // think we need to remove
   padding: $padding;
   border: $border;
   background-color: $input-bg;

@@ -732,7 +732,6 @@ textarea,
 .select select {
   line-height: 1.5;
   margin: 0;
-  height: var(--space-most);
   padding: var(--space-least) var(--space-less);
   border: 1px solid #ccc;
   background-color: #fff;
@@ -3556,131 +3555,6 @@ tr:nth-child(even) {
 
   .off-sixth-2000 {
     margin-left: 16.66666%;
-  }
-}
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3em;
-  padding: 0 0.6em;
-  background: #fff;
-  box-shadow: 0 0 0.2em rgba(17, 17, 17, 0.2);
-  z-index: 10000;
-  transition: all 0.3s;
-  transform-style: preserve-3d;
-}
-nav .brand,
-nav .menu,
-nav .burger {
-  float: right;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-nav .brand {
-  font-weight: 700;
-  float: left;
-  padding: 0 0.6em;
-  max-width: 50%;
-  white-space: nowrap;
-  color: inherit;
-}
-nav .brand * {
-  vertical-align: middle;
-}
-nav .logo {
-  height: 2em;
-  margin-right: 0.3em;
-}
-nav .select::after {
-  height: calc(100% - 1px);
-  padding: 0;
-  line-height: 2.4em;
-}
-nav .menu > * {
-  margin-right: 0.6em;
-}
-
-nav .burger {
-  display: none;
-}
-
-@media all and (max-width: 60rem) {
-  nav .burger {
-    display: inline-block;
-    cursor: pointer;
-    bottom: -1000em;
-    margin: 0;
-  }
-  nav .burger ~ .menu,
-nav .show:checked ~ .burger {
-    position: fixed;
-    min-height: 100%;
-    top: 0;
-    right: 0;
-    bottom: -1000em;
-    margin: 0;
-    background: #fff;
-    transition: all 0.5s ease;
-    transform: none;
-  }
-  nav .burger ~ .menu {
-    z-index: 11;
-  }
-  nav .show:checked ~ .burger {
-    color: transparent;
-    width: 100%;
-    border-radius: 0;
-    background: rgba(0, 0, 0, 0.2);
-    transition: all 0.5s ease;
-  }
-  nav .show ~ .menu {
-    width: 70%;
-    max-width: 300px;
-    transform-origin: center right;
-    transition: all 0.25s ease;
-    transform: scaleX(0);
-  }
-  nav .show ~ .menu > * {
-    transform: translateX(100%);
-    transition: all 0s ease 0.5s;
-  }
-  nav .show:checked ~ .menu > *:nth-child(1) {
-    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  }
-  nav .show:checked ~ .menu > *:nth-child(2) {
-    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-  }
-  nav .show:checked ~ .menu > *:nth-child(3) {
-    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-  }
-  nav .show:checked ~ .menu > *:nth-child(4) {
-    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s;
-  }
-  nav .show:checked ~ .menu > *:nth-child(5) {
-    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
-  }
-  nav .show:checked ~ .menu > *:nth-child(6) {
-    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
-  }
-  nav .show:checked ~ .menu {
-    transform: scaleX(1);
-  }
-  nav .show:checked ~ .menu > * {
-    transform: translateX(0);
-    transition: all 0.5s ease-in-out 0.6s;
-  }
-  nav .burger ~ .menu > * {
-    display: block;
-    margin: var(--seperation);
-    text-align: left;
-    max-width: calc(100% - var(-seperation));
-  }
-  nav .burger ~ .menu > a {
-    padding: var(--seperation-least) var(--seperation-more);
   }
 }
 .stack,
