@@ -13,7 +13,7 @@
   font-family: $font-family;
   box-sizing: border-box;
   height: 100%;
-  @include mod(font-size,0);
+  // @include mod(font-size,0);
 }
 
 #{$class-name} body {

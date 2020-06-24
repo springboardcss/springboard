@@ -5,9 +5,9 @@
 @use '../modularscale/index' as *;
 
 // // Global Variables
-// $space: var(--seperation) !default;
-// $vertical: $space !default;
-// $horizontal: $space !default;
+$space: var(--seperation) !default;
+$vertical: $space !default;
+$horizontal: $space !default;
 
 // Plugin Variables
 $grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 !default;
