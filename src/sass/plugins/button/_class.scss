@@ -26,13 +26,13 @@
   // Methods
   &:hover,
   &:focus {
-    box-shadow: $button-hover;
+    box-shadow: $button-hover-shadow;
     border: 0;
     }
 
   &.pseudo:hover,
   &.pseudo:focus {
-    box-shadow: $button-pseudo-hover;
+    box-shadow: $button-pseudo-hover-shadow;
     }
 
   &.active,
@@ -44,19 +44,6 @@
   &[disabled] {
     cursor: default;
     box-shadow: none;
-    background: #bbb;
-    }
+    background: $button-disabled-bg;
   }
-
-
-// Note: If you try to do this there's a selector explossion:
-
-// &%hover {
-//   box-shadow: $hover;
-//   }
-
-// &:hover {
-//   @extend %hover;
-//   }
-
-// Like `button.button:hover, .button[type="submit"], ...`
+}

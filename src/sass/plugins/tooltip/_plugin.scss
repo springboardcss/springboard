@@ -70,7 +70,7 @@
 
   &:hover:after,
   &:focus:after {
-    padding: var(--seperation-less) var(--seperation-more);
+    padding: $spacing-less $spacing-more;
     }
   }
 

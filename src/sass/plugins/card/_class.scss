@@ -15,7 +15,7 @@
   overflow: hidden;
   text-align: left;
   background: $white;
-  margin-bottom: var(--seperation);
+  margin-bottom: $spacing;
   padding: 0;
   transition: all .3s ease;
 
@@ -65,8 +65,8 @@
     h4,
     h5,
     h6 {
-      padding: 0;
-      margin: 0 2em 0 0;
+      padding: $heading-padding-top $heading-padding-bottom;
+      margin: 0 $spacing-less 0 0;
       line-height: 1;
       display: inline-block;
       vertical-align: text-bottom;
@@ -82,7 +82,7 @@
     }
 
   p {
-    margin: var(--seperation-least) 0;
+    margin: $spacing-least 0;
 
     &:first-child {
       margin-top: 0;

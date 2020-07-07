@@ -12,6 +12,7 @@
   $shadow: 0 0 .2em rgba($black, $transparency) !default;
 
 // Spacing
+  // creates CSS variables in :root
   $space:        0 !default;
   $space-min:    $space - 8 !default;
   $space-least:  $space - 2 !default;
@@ -20,11 +21,15 @@
   $space-most:   $space + 2 !default;
   $space-max:    $space + 4 !default;
 
+  // using CSS variables from above. Use these for spacing.
   $spacing: var(--space) !default;
+  $spacing-min: var(--space-min) !default;
   $spacing-least: var(--space-least) !default;
   $spacing-less: var(--space-less) !default;
   $spacing-more: var(--space-more) !default;
   $spacing-most: var(--space-most) !default;
+  $spacing-max: var(--space-max) !default;
+
   
 // headings
   $h1-font-size: 4 !default;
@@ -34,15 +39,20 @@
   $h5-font-size: 0 !default;
   $h6-font-size: 0 !default;
   $heading-color: $black !default;
-  $heading-padding-top: 1 !default;
+  $heading-padding-top: $spacing-less !default;
   $heading-padding-bottom: 0 !default;
+  $heading-margin-bottom: $spacing-less;
+  $heading-line-height: 1;
 
 // Button
   $button-radius: $radius;
   $button-margin: $spacing-least $spacing-less;
-  $button-hover: inset 0 0 0 99em rgba($white, $transparency) !default;
+  $button-hover-shadow: inset 0 0 0 99em rgba($white, $transparency) !default;
   $button-click: inset 0 0 0 99em rgba($black, $transparency) !default;
-  $button-pseudo-hover: inset 0 0 0 99em rgba($black, $transparency / 2) !default;
+  $button-pseudo-hover-shadow: inset 0 0 0 99em rgba($black, $transparency / 2) !default;
+  $button-bg: $primary;
+  $button-color: $white;
+  $button-disabled-bg: #bbb;
 
 // Card
   $card-shadow: 0 !default;

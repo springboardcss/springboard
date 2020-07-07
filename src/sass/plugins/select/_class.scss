@@ -60,7 +60,7 @@ $dropimage: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvM
 
   option {
     //font-size: inherit;
-    padding: var(--seperation-less);
+    padding: $spacing-less;
   }
 
   &[multiple] {

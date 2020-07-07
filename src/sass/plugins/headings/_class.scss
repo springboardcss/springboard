@@ -6,36 +6,37 @@
 
 %heading {
   color: $heading-color;
-  @include mod(padding-top,$heading-padding-top);
-  @include mod(padding-bottom,$heading-padding-bottom);
+  padding-top: $heading-padding-top;
+  padding-bottom: $heading-padding-bottom;
+  margin-bottom: $heading-margin-bottom;
 }
 
 %h1 {
   @include mod(font-size, $h1-font-size);
-  line-height: 1;
+  line-height: $heading-line-height;
 }
 
 %h2 {
   @include mod(font-size, $h2-font-size);
-  line-height: 1;
+  line-height: $heading-line-height;
 }
 
 %h3 {
   @include mod(font-size, $h3-font-size);
-  line-height: 1;
+  line-height: $heading-line-height;
 }
 
 %h4 {
   @include mod(font-size, $h4-font-size);
-  line-height: 1;
+  line-height: $heading-line-height;
 }
 
 %h5 {
   @include mod(font-size, $h5-font-size);
-  line-height: 1;
+  line-height: $heading-line-height;
 }
 
 %h6 {
   @include mod(font-size, $h6-font-size);
-  line-height: 1;
+  line-height: $heading-line-height;
 }

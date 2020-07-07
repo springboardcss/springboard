@@ -115,13 +115,13 @@ nav {
 
       .burger ~ .menu > * {
         display: block;
-        margin: var(--seperation);
+        margin: $spacing;
         text-align: left;
-        max-width: calc(100% - var(-seperation));
+        max-width: calc(100% - $spacing);
       }
 
       .burger ~ .menu > a {
-        padding: var(--seperation-least) var(--seperation-more);
+        padding: $spacing-least $spacing-more;
       }
     }
   }

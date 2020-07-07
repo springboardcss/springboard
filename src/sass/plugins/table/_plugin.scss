@@ -11,7 +11,7 @@ table {
 
 td,
 th {
-  padding: var(--seperation-least) 2.4em var(--seperation-least) var(--seperation);
+  padding: $spacing-least 2.4em $spacing-least $spacing;
   }
 
 th {

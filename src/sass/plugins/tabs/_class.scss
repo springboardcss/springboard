@@ -12,7 +12,7 @@
   
   > label img {
     float: left;
-    margin-left: var(--seperation);
+    margin-left: $spacing;
   }
 
   > .row {
