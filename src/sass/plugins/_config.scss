@@ -19,7 +19,6 @@
   $space-more:   $space + 1 !default;
   $space-most:   $space + 2 !default;
   $space-max:    $space + 4 !default;
-  // $space-class-name:   ':root' !default;
 
   $spacing: var(--space) !default;
   $spacing-least: var(--space-least) !default;
@@ -83,12 +82,9 @@
   $class-name: "" !default;
 
 // Grid
-  $grid-vertical: $space !default;
-  // ! Real code <- take a look at this
-  // $grid-gutter: 10px !default;
-  // $horizontal: $grid-gutter !default;
-  $vertical: $space !default;
-  $horizontal: $space !default;
+  $grid-space: var(--space) !default;
+  $vertical: $grid-space !default;
+  $horizontal: $grid-space !default;
 
 // Input
   $input-height: var(--space-most) !default;

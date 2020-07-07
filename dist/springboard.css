@@ -183,25 +183,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   height: 100%;
-  font-size: 14px;
-}
-@media (min-width: 500px) and (max-width: 1000px) {
-  html,
-body {
-    font-size: calc( 14px + 2 * ( ( 100vw - 500px) / 500 ) );
-  }
-}
-@media (min-width: 1000px) and (max-width: 1200px) {
-  html,
-body {
-    font-size: calc( 16px + 4 * ( ( 100vw - 1000px) / 200 ) );
-  }
-}
-@media (min-width: 1200px) {
-  html,
-body {
-    font-size: 20px;
-  }
 }
 
 body {
@@ -1000,8 +981,8 @@ tr:nth-child(even) {
 .flex {
   display: -ms-flexbox;
   display: flex;
-  margin-left: calc(0 * -1);
-  width: calc(100% + 0);
+  margin-left: calc(var(--space) * -1);
+  width: calc(100% + var(--space));
   flex-wrap: wrap;
   transition: all 0.3s ease;
 }
@@ -1010,8 +991,8 @@ tr:nth-child(even) {
   box-sizing: border-box;
   flex: 1 1 auto;
   /* Default for IE10 bug */
-  padding-left: 0;
-  padding-bottom: 0;
+  padding-left: var(--space);
+  padding-bottom: var(--space);
 }
 .flex > *:last-child {
   padding-bottom: 0;
