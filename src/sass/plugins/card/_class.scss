@@ -5,6 +5,7 @@
 
 @use '../config' as *;
 @use '../modularscale/index' as *;
+
 // http://8gramgorilla.com/mastering-sass-extends-and-placeholders/
 %card {
 
@@ -76,7 +77,7 @@
     }
 
   footer {
-    padding: .8em;
+    padding: $card-p-padding;
     }
 
   p {
