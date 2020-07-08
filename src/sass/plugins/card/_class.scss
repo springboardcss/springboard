@@ -57,7 +57,7 @@
   header {
     font-weight: bold;
     position: relative;
-    border-bottom: 1px solid #eee;
+    border-bottom: $card-header-border-bottom;
 
     h1,
     h2,
