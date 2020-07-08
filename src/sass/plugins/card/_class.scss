@@ -15,7 +15,7 @@
   overflow: hidden;
   text-align: left;
   background: $white;
-  margin-bottom: $spacing;
+  margin-bottom: $card-margin-bottom;
   padding: 0;
   transition: all .3s ease;
 
@@ -41,11 +41,11 @@
   header,
   section,
   > p {
-    padding: .6em .8em;
+    padding: $card-p-padding;
     }
 
   section {
-    padding: .6em .8em 0;
+    padding: $card-p-padding 0;
   }
 
   hr {
@@ -65,8 +65,6 @@
     h4,
     h5,
     h6 {
-      padding: $heading-padding-top $heading-padding-bottom;
-      margin: 0 $spacing-less 0 0;
       line-height: 1;
       display: inline-block;
       vertical-align: text-bottom;

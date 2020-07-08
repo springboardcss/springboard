@@ -59,6 +59,8 @@
   $card-border: $border !default;
   $card-radius: $radius !default;
   $card-shadow: $shadow !default;
+  $card-margin-bottom: $spacing;
+  $card-p-padding: $spacing-less $spacing-least;
 
 // Checkbox
   $checkbox-character: '\2714' !default;
