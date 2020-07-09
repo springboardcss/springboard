@@ -7,9 +7,10 @@
   $class-name: "" !default;
   $radius: 0 !default;
   $font-family: Arial, Helvetica, sans-serif;
-  $transition: all 0.3s !default;
+  $transition: all 0.3s ease !default;
   $breakpoint: 60rem !default;
   $shadow: 0 0 .2em rgba($black, $transparency) !default;
+  $hr-color: $gray;
 
 // Spacing
   // creates CSS variables in :root

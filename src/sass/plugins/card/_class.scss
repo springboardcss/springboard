@@ -18,7 +18,7 @@
   background: $white;
   margin-bottom: $card-margin-bottom;
   padding: 0;
-  transition: all .3s ease;
+  transition: $transition;
 
   &.hidden,
   :checked + & {
@@ -30,6 +30,7 @@
 
   // Make sure that nothing overflows
   > * {
+    width: 100%;
     max-width: 100%;
     display: block;
 
@@ -52,7 +53,7 @@
   hr {
     border: none;
     height: 1px;
-    background-color: #eee;
+    background-color: $hr-color;
   }
 
   header {
@@ -66,7 +67,7 @@
     h4,
     h5,
     h6 {
-      line-height: 1;
+      line-height: $heading-line-height;
       display: inline-block;
       vertical-align: text-bottom;
       }
@@ -119,7 +120,7 @@
     margin: .1em;
     }
 
-  .dangerous {
+  .danger {
     background: $error;
     float: right;
     }
