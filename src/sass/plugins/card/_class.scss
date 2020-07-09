@@ -42,7 +42,8 @@
   // The first part from the card
   header,
   section,
-  > p {
+  > p,
+  time {
     padding: $card-p-padding;
     }
 
@@ -81,7 +82,7 @@
     padding: $card-p-padding;
     }
 
-  p,time {
+  p {
     margin: $spacing-least 0;
 
     &:first-child {
