@@ -13,8 +13,8 @@ $h6-font-size: 0 !default;
 $heading-color: $black !default;
 $heading-padding-top: $spacing-less !default;
 $heading-padding-bottom: 0 !default;
-$heading-margin-bottom: $spacing-less;
-$heading-line-height: 1;
+$heading-margin-bottom: $spacing-less !default;
+$heading-line-height: 1 !default;
 
 %heading {
   color: $heading-color;
