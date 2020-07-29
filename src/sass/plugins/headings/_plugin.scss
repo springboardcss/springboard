@@ -1,31 +1,31 @@
 @use 'class' as *;
 
-h1 {
+h1,.h1 {
   @extend %h1;
   @extend %heading;
 }
 
-h2 {
+h2,.h2 {
   @extend %h2;
   @extend %heading;
 }
 
-h3 {
+h3,.h3 {
   @extend %h3;
   @extend %heading;
 }
 
-h4 {
+h4,.h4 {
   @extend %h4;
   @extend %heading;
 }
 
-h5 {
+h5,.h5 {
   @extend %h5;
   @extend %heading;
 }
 
-h6 {
+h6,.h6 {
   @extend %h6;
   @extend %heading;
 }
