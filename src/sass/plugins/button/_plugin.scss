@@ -8,13 +8,14 @@
 
 
 $button-radius: $radius !default;
-$button-margin: $spacing-least $spacing-less!default;
-$button-hover-shadow: inset 0 0 0 99em rgba($white, $transparency)!default;
-$button-click: inset 0 0 0 99em rgba($black, $transparency)!default;
-$button-pseudo-hover-shadow: inset 0 0 0 99em rgba($black, $transparency / 2)!default;
-$button-bg: $primary!default;
-$button-color: $black!default;
-$button-disabled-bg: #bbb!default;
+$button-margin: $spacing-least $spacing-less !default;
+$button-hover-shadow: inset 0 0 0 99em rgba($white, $transparency) !default;
+$button-click: inset 0 0 0 99em rgba($black, $transparency) !default;
+$button-pseudo-hover-shadow: inset 0 0 0 99em rgba($black, $transparency / 2) !default;
+$button-bg: $primary !default;
+$button-color: $black !default;
+$button-disabled-bg: #bbb !default;
+$button-weight: normal !default;
 
 // Definition
 %button {
@@ -25,6 +26,7 @@ $button-disabled-bg: #bbb!default;
   border-radius: $button-radius;
   background-color: $button-bg;
   color: $button-color;
+  font-weight: $button-weight;
 
   // Avoid the input { height: 2.2 }
   height: auto;
