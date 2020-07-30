@@ -24,6 +24,7 @@ $button-disabled-bg: #bbb!default;
   transition: $transition;
   border-radius: $button-radius;
   background-color: $button-bg;
+  color: $button-color;
 
   // Avoid the input { height: 2.2 }
   height: auto;
