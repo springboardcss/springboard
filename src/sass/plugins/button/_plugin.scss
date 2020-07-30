@@ -1,8 +1,6 @@
 @use 'class' as *; 
 // %button
 // This class defines a clickable element that looks like a label
-@forward '../config';
-@forward '../modularscale/index';
 
 @use '../config' as *;
 @use '../modularscale/index' as *;
