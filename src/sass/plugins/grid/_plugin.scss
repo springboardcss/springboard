@@ -101,8 +101,32 @@ $grid-offpart-sizes: (
   flex-grow: 1;
 }
 
-.center {
+.justify-center {
   justify-content: center;
+}
+
+.justify-end {
+  justify-content: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 @each $count in $grid-count {
