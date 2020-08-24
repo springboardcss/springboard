@@ -824,6 +824,9 @@ i[class*=" icon-"]:before {
 
 picture, img {
   line-height: 1;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 button,
