@@ -822,6 +822,10 @@ i[class*=" icon-"]:before {
   }
 }
 
+picture, img {
+  line-height: 1;
+}
+
 button,
 .button,
 [type=submit],
