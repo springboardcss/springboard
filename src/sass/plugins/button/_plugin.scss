@@ -16,6 +16,9 @@ $button-bg: $primary !default;
 $button-color: $black !default;
 $button-disabled-bg: #bbb !default;
 $button-weight: normal !default;
+$button-border-width: 1px;
+$button-border-color: transaprent;
+$button-border-style: solid;
 
 // Definition
 %button {
@@ -23,6 +26,9 @@ $button-weight: normal !default;
   margin: 0;
   cursor: pointer;
   transition: $transition;
+  border-color: $button-border-color;
+  border-width: $button-border-width;
+  border-style: $button-border-style;
   border-radius: $button-radius;
   background-color: $button-bg;
   color: $button-color;
@@ -84,4 +90,11 @@ button,
 [type=submit],
 .button-link a {
   @extend %button;
+}
+
+.button-outline {
+  @extend %button;
+  background-color: transparent;
+  color: $button-bg;
+  border-color: $button-bg;
 }

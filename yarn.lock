@@ -4000,6 +4000,19 @@ split-string@^3.0.1, split-string@^3.0.2:
   dependencies:
     extend-shallow "^3.0.0"
 
+springboard-css@^0.4.33:
+  version "0.4.33"
+  resolved "https://registry.yarnpkg.com/springboard-css/-/springboard-css-0.4.33.tgz#c812ccaa761940b48b86116465763f745f565067"
+  integrity sha512-5X90w1ZMGacG+WZulFvNN9whhY7bEOTwFfSFGbT71yGQXpI//0hgsKMYtPH4kyjLXrIxbMh4u7RkyNW8P9IKvQ==
+  dependencies:
+    breakpoint-sass "^2.7.1"
+    caniuse-lite "^1.0.30001050"
+    chokidar "^3.4.0"
+    core-js "^3.6.5"
+    mathsass "^0.11.0"
+    modularscale-sass "^3.0.10"
+    normalize.css "^8.0.1"
+
 sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
