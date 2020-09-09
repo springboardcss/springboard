@@ -16,9 +16,9 @@ $button-bg: $primary !default;
 $button-color: $black !default;
 $button-disabled-bg: #bbb !default;
 $button-weight: normal !default;
-$button-border-width: 1px;
-$button-border-color: transaprent;
-$button-border-style: solid;
+$button-border-width: 1px !default;
+$button-border-color: transaprent !default;
+$button-border-style: solid !default;
 
 // Definition
 %button {
