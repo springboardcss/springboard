@@ -45,7 +45,7 @@ $button-border-style: solid !default;
   &:hover,
   &:focus {
     box-shadow: $button-hover-shadow;
-    border: 0;
+    // border: 0;
     }
 
   &.pseudo:hover,
