@@ -455,11 +455,6 @@ a {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-a:active,
-a:hover {
-  outline: 0;
-}
-
 /* Text-level semantics
    ========================================================================== */
 /**
@@ -755,7 +750,7 @@ i[class*=" icon-"]:before {
 .label, button,
 .button,
 [type=submit],
-.button-link a, .dropimage, [data-tooltip]:after {
+.button-link a, .button-outline, .dropimage, [data-tooltip]:after {
   display: inline-block;
   text-align: center;
   letter-spacing: inherit;
@@ -777,25 +772,25 @@ i[class*=" icon-"]:before {
 .success.label, button.success,
 .success.button,
 .success[type=submit],
-.button-link a.success, .success.dropimage, .success[data-tooltip]:after {
+.button-link a.success, .success.button-outline, .success.dropimage, .success[data-tooltip]:after {
   background: #2ecc40;
 }
 .warning.label, button.warning,
 .warning.button,
 .warning[type=submit],
-.button-link a.warning, .warning.dropimage, .warning[data-tooltip]:after {
+.button-link a.warning, .warning.button-outline, .warning.dropimage, .warning[data-tooltip]:after {
   background: #ff851b;
 }
 .error.label, button.error,
 .error.button,
 .error[type=submit],
-.button-link a.error, .error.dropimage, .error[data-tooltip]:after {
+.button-link a.error, .error.button-outline, .error.dropimage, .error[data-tooltip]:after {
   background: #ff4136;
 }
 .pseudo.label, button.pseudo,
 .pseudo.button,
 .pseudo[type=submit],
-.button-link a.pseudo, .pseudo.dropimage, .pseudo[data-tooltip]:after {
+.button-link a.pseudo, .pseudo.button-outline, .pseudo.dropimage, .pseudo[data-tooltip]:after {
   background-color: transparent;
   color: inherit;
 }
@@ -832,7 +827,7 @@ picture, img {
 button,
 .button,
 [type=submit],
-.button-link a, .dropimage {
+.button-link a, .button-outline, .dropimage {
   margin: 0;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -844,47 +839,50 @@ button,
 button:hover,
 .button:hover,
 [type=submit]:hover,
-.button-link a:hover, .dropimage:hover, button:focus,
+.button-link a:hover, .button-outline:hover, .dropimage:hover, button:focus,
 .button:focus,
 [type=submit]:focus,
-.button-link a:focus, .dropimage:focus {
+.button-link a:focus, .button-outline:focus, .dropimage:focus {
   box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.2);
   border: 0;
 }
 button.pseudo:hover,
 .pseudo.button:hover,
 .pseudo[type=submit]:hover,
-.button-link a.pseudo:hover, .pseudo.dropimage:hover, button.pseudo:focus,
+.button-link a.pseudo:hover, .pseudo.button-outline:hover, .pseudo.dropimage:hover, button.pseudo:focus,
 .pseudo.button:focus,
 .pseudo[type=submit]:focus,
-.button-link a.pseudo:focus, .pseudo.dropimage:focus {
+.button-link a.pseudo:focus, .pseudo.button-outline:focus, .pseudo.dropimage:focus {
   box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.1);
 }
 button.active,
 .active.button,
 .active[type=submit],
-.button-link a.active, .active.dropimage, button:active,
+.button-link a.active, .active.button-outline, .active.dropimage, button:active,
 .button:active,
 [type=submit]:active,
-.button-link a:active, .dropimage:active {
+.button-link a:active, .button-outline:active, .dropimage:active {
   box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.2);
 }
 button[disabled],
 [disabled].button,
 [disabled][type=submit],
-.button-link a[disabled], [disabled].dropimage {
+.button-link a[disabled], [disabled].button-outline, [disabled].dropimage {
   cursor: default;
   box-shadow: none;
   background: #bbb;
 }
 
-.dropimage, button,
+.dropimage, .button-outline, button,
 .button,
 [type=submit],
 .button-link a {
   margin: 0;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-color: transaprent;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 0;
   background-color: #0074d9;
   color: #fff;
@@ -893,35 +891,35 @@ button[disabled],
   vertical-align: baseline;
   box-shadow: 0 0 rgba(0, 0, 0, 0) inset;
 }
-.dropimage:hover, button:hover,
+.dropimage:hover, .button-outline:hover, button:hover,
 .button:hover,
 [type=submit]:hover,
-.button-link a:hover, .dropimage:focus, button:focus,
+.button-link a:hover, .dropimage:focus, .button-outline:focus, button:focus,
 .button:focus,
 [type=submit]:focus,
 .button-link a:focus {
   box-shadow: inset 0 0 0 99em rgba(255, 255, 255, 0.2);
   border: 0;
 }
-.pseudo.dropimage:hover, button.pseudo:hover,
+.pseudo.dropimage:hover, .pseudo.button-outline:hover, button.pseudo:hover,
 .pseudo.button:hover,
 .pseudo[type=submit]:hover,
-.button-link a.pseudo:hover, .pseudo.dropimage:focus, button.pseudo:focus,
+.button-link a.pseudo:hover, .pseudo.dropimage:focus, .pseudo.button-outline:focus, button.pseudo:focus,
 .pseudo.button:focus,
 .pseudo[type=submit]:focus,
 .button-link a.pseudo:focus {
   box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.1);
 }
-.active.dropimage, button.active,
+.active.dropimage, .active.button-outline, button.active,
 .active.button,
 .active[type=submit],
-.button-link a.active, .dropimage:active, button:active,
+.button-link a.active, .dropimage:active, .button-outline:active, button:active,
 .button:active,
 [type=submit]:active,
 .button-link a:active {
   box-shadow: inset 0 0 0 99em rgba(17, 17, 17, 0.2);
 }
-[disabled].dropimage, button[disabled],
+[disabled].dropimage, [disabled].button-outline, button[disabled],
 [disabled].button,
 [disabled][type=submit],
 .button-link a[disabled] {
@@ -941,6 +939,12 @@ button[disabled],
 }
 [type] + .toggle:after, [type] + .toggle:before {
   display: none;
+}
+
+.button-outline {
+  background-color: transparent;
+  color: #0074d9;
+  border-color: #0074d9;
 }
 
 input,
