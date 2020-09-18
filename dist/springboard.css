@@ -2060,897 +2060,721 @@ tr:nth-child(even) {
 @media all and (min-width: 500px) {
   .full-500 {
     width: 100%;
-    display: block;
   }
 
   .half-500 {
     width: 50%;
-    display: block;
   }
 
   .third-500 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-500 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-500 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-500 {
     width: 75%;
-    display: block;
   }
 
   .fifth-500 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-500 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-500 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-500 {
     width: 80%;
-    display: block;
   }
 
   .sixth-500 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 600px) {
   .full-600 {
     width: 100%;
-    display: block;
   }
 
   .half-600 {
     width: 50%;
-    display: block;
   }
 
   .third-600 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-600 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-600 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-600 {
     width: 75%;
-    display: block;
   }
 
   .fifth-600 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-600 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-600 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-600 {
     width: 80%;
-    display: block;
   }
 
   .sixth-600 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 700px) {
   .full-700 {
     width: 100%;
-    display: block;
   }
 
   .half-700 {
     width: 50%;
-    display: block;
   }
 
   .third-700 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-700 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-700 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-700 {
     width: 75%;
-    display: block;
   }
 
   .fifth-700 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-700 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-700 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-700 {
     width: 80%;
-    display: block;
   }
 
   .sixth-700 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 800px) {
   .full-800 {
     width: 100%;
-    display: block;
   }
 
   .half-800 {
     width: 50%;
-    display: block;
   }
 
   .third-800 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-800 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-800 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-800 {
     width: 75%;
-    display: block;
   }
 
   .fifth-800 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-800 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-800 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-800 {
     width: 80%;
-    display: block;
   }
 
   .sixth-800 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 900px) {
   .full-900 {
     width: 100%;
-    display: block;
   }
 
   .half-900 {
     width: 50%;
-    display: block;
   }
 
   .third-900 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-900 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-900 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-900 {
     width: 75%;
-    display: block;
   }
 
   .fifth-900 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-900 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-900 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-900 {
     width: 80%;
-    display: block;
   }
 
   .sixth-900 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 1000px) {
   .full-1000 {
     width: 100%;
-    display: block;
   }
 
   .half-1000 {
     width: 50%;
-    display: block;
   }
 
   .third-1000 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-1000 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-1000 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-1000 {
     width: 75%;
-    display: block;
   }
 
   .fifth-1000 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-1000 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-1000 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-1000 {
     width: 80%;
-    display: block;
   }
 
   .sixth-1000 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 1100px) {
   .full-1100 {
     width: 100%;
-    display: block;
   }
 
   .half-1100 {
     width: 50%;
-    display: block;
   }
 
   .third-1100 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-1100 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-1100 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-1100 {
     width: 75%;
-    display: block;
   }
 
   .fifth-1100 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-1100 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-1100 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-1100 {
     width: 80%;
-    display: block;
   }
 
   .sixth-1100 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 1200px) {
   .full-1200 {
     width: 100%;
-    display: block;
   }
 
   .half-1200 {
     width: 50%;
-    display: block;
   }
 
   .third-1200 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-1200 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-1200 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-1200 {
     width: 75%;
-    display: block;
   }
 
   .fifth-1200 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-1200 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-1200 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-1200 {
     width: 80%;
-    display: block;
   }
 
   .sixth-1200 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 1300px) {
   .full-1300 {
     width: 100%;
-    display: block;
   }
 
   .half-1300 {
     width: 50%;
-    display: block;
   }
 
   .third-1300 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-1300 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-1300 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-1300 {
     width: 75%;
-    display: block;
   }
 
   .fifth-1300 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-1300 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-1300 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-1300 {
     width: 80%;
-    display: block;
   }
 
   .sixth-1300 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 1400px) {
   .full-1400 {
     width: 100%;
-    display: block;
   }
 
   .half-1400 {
     width: 50%;
-    display: block;
   }
 
   .third-1400 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-1400 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-1400 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-1400 {
     width: 75%;
-    display: block;
   }
 
   .fifth-1400 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-1400 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-1400 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-1400 {
     width: 80%;
-    display: block;
   }
 
   .sixth-1400 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 1500px) {
   .full-1500 {
     width: 100%;
-    display: block;
   }
 
   .half-1500 {
     width: 50%;
-    display: block;
   }
 
   .third-1500 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-1500 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-1500 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-1500 {
     width: 75%;
-    display: block;
   }
 
   .fifth-1500 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-1500 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-1500 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-1500 {
     width: 80%;
-    display: block;
   }
 
   .sixth-1500 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 1600px) {
   .full-1600 {
     width: 100%;
-    display: block;
   }
 
   .half-1600 {
     width: 50%;
-    display: block;
   }
 
   .third-1600 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-1600 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-1600 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-1600 {
     width: 75%;
-    display: block;
   }
 
   .fifth-1600 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-1600 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-1600 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-1600 {
     width: 80%;
-    display: block;
   }
 
   .sixth-1600 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 1700px) {
   .full-1700 {
     width: 100%;
-    display: block;
   }
 
   .half-1700 {
     width: 50%;
-    display: block;
   }
 
   .third-1700 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-1700 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-1700 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-1700 {
     width: 75%;
-    display: block;
   }
 
   .fifth-1700 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-1700 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-1700 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-1700 {
     width: 80%;
-    display: block;
   }
 
   .sixth-1700 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 1800px) {
   .full-1800 {
     width: 100%;
-    display: block;
   }
 
   .half-1800 {
     width: 50%;
-    display: block;
   }
 
   .third-1800 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-1800 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-1800 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-1800 {
     width: 75%;
-    display: block;
   }
 
   .fifth-1800 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-1800 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-1800 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-1800 {
     width: 80%;
-    display: block;
   }
 
   .sixth-1800 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 1900px) {
   .full-1900 {
     width: 100%;
-    display: block;
   }
 
   .half-1900 {
     width: 50%;
-    display: block;
   }
 
   .third-1900 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-1900 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-1900 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-1900 {
     width: 75%;
-    display: block;
   }
 
   .fifth-1900 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-1900 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-1900 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-1900 {
     width: 80%;
-    display: block;
   }
 
   .sixth-1900 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 2000px) {
   .full-2000 {
     width: 100%;
-    display: block;
   }
 
   .half-2000 {
     width: 50%;
-    display: block;
   }
 
   .third-2000 {
     width: 33.33333%;
-    display: block;
   }
 
   .two-third-2000 {
     width: 66.66666%;
-    display: block;
   }
 
   .fourth-2000 {
     width: 25%;
-    display: block;
   }
 
   .three-fourth-2000 {
     width: 75%;
-    display: block;
   }
 
   .fifth-2000 {
     width: 20%;
-    display: block;
   }
 
   .two-fifth-2000 {
     width: 40%;
-    display: block;
   }
 
   .three-fifth-2000 {
     width: 60%;
-    display: block;
   }
 
   .four-fifth-2000 {
     width: 80%;
-    display: block;
   }
 
   .sixth-2000 {
     width: 16.66666%;
-    display: block;
   }
 }
 @media all and (min-width: 500px) {

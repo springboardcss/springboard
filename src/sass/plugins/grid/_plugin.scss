@@ -160,7 +160,7 @@ $grid-offpart-sizes: (
     @each $part in $grid-part {
       .#{$part}-#{$i} {
         width: map-get($grid-part-sizes, $part);
-        display: block;
+        // display: block;
       }
     }
   }
