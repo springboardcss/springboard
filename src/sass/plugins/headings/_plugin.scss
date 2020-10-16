@@ -11,12 +11,14 @@ $heading-padding-top: var(--spacing-less) !default;
 $heading-padding-bottom: 0 !default;
 $heading-margin-bottom: var(--spacing-less) !default;
 $heading-line-height: 1 !default;
+$heading-font: 'Arial', sans-serif !default;
 
 %heading {
   color: $heading-color;
   padding-top: $heading-padding-top;
   padding-bottom: $heading-padding-bottom;
   margin-bottom: $heading-margin-bottom;
+  font-family: $heading-font;
 }
 
 %h1 {
