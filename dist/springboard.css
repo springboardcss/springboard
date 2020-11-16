@@ -7,6 +7,26 @@
   --space-more:18.2px;
   --space-most:23.66px;
   --space-max:39.9854px;
+  --space--10:1.015534104px;
+  --space--9:1.3201943352px;
+  --space--8:114.20230094px;
+  --space--7:2.2311284265px;
+  --space--6:2.9004669545px;
+  --space--5:3.7706070408px;
+  --space--4:4.901789153px;
+  --space--3:6.372325899px;
+  --space--2:8.2840236686px;
+  --space--1:10.7692307692px;
+  --space-1:18.2px;
+  --space-2:23.66px;
+  --space-3:30.758px;
+  --space-4:39.9854px;
+  --space-5:51.98102px;
+  --space-6:67.575326px;
+  --space-7:87.8479238px;
+  --space-8:114.20230094px;
+  --space-9:148.462991222px;
+  --space-10:193.0018885886px;
 }
 @media (min-width: 500px) and (max-width: 1000px) {
   :root {
@@ -111,6 +131,306 @@
 @media (min-width: 1200px) {
   :root {
     --space-max:57.122px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space--10:calc( 1.015534104px + 0.1450763006 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space--10:calc( 1.1606104046px + 0.2901526011 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space--10:1.4507630057px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space--9:calc( 1.3201943352px + 0.1885991907 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space--9:calc( 1.508793526px + 0.3771983815 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space--9:1.8859919074px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space--8:calc( 114.20230094px + 16.31461442 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space--8:calc( 130.51691536px + 32.62922884 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space--8:163.1461442px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space--7:calc( 2.2311284265px + 0.3187326324 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space--7:calc( 2.5498610589px + 0.6374652647 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space--7:3.1873263236px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space--6:calc( 2.9004669545px + 0.4143524221 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space--6:calc( 3.3148193765px + 0.8287048441 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space--6:4.1435242207px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space--5:calc( 3.7706070408px + 0.5386581487 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space--5:calc( 4.3092651895px + 1.0773162974 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space--5:5.3865814869px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space--4:calc( 4.901789153px + 0.7002555933 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space--4:calc( 5.6020447463px + 1.4005111866 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space--4:7.0025559329px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space--3:calc( 6.372325899px + 0.9103322713 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space--3:calc( 7.2826581702px + 1.8206645426 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space--3:9.1033227128px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space--2:calc( 8.2840236686px + 1.1834319527 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space--2:calc( 9.4674556213px + 2.3668639053 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space--2:11.8343195266px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space--1:calc( 10.7692307692px + 1.5384615385 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space--1:calc( 12.3076923077px + 3.0769230769 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space--1:15.3846153846px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space-1:calc( 18.2px + 2.6 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space-1:calc( 20.8px + 5.2 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space-1:26px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space-2:calc( 23.66px + 3.38 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space-2:calc( 27.04px + 6.76 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space-2:33.8px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space-3:calc( 30.758px + 4.394 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space-3:calc( 35.152px + 8.788 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space-3:43.94px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space-4:calc( 39.9854px + 5.7122 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space-4:calc( 45.6976px + 11.4244 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space-4:57.122px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space-5:calc( 51.98102px + 7.42586 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space-5:calc( 59.40688px + 14.85172 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space-5:74.2586px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space-6:calc( 67.575326px + 9.653618 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space-6:calc( 77.228944px + 19.307236 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space-6:96.53618px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space-7:calc( 87.8479238px + 12.5497034 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space-7:calc( 100.3976272px + 25.0994068 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space-7:125.497034px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space-8:calc( 114.20230094px + 16.31461442 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space-8:calc( 130.51691536px + 32.62922884 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space-8:163.1461442px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space-9:calc( 148.462991222px + 21.208998746 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space-9:calc( 169.671989968px + 42.417997492 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space-9:212.08998746px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+  :root {
+    --space-10:calc( 193.0018885886px + 27.5716983698 * ( ( 100vw - 500px) / 500 ) );
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  :root {
+    --space-10:calc( 220.5735869584px + 55.1433967396 * ( ( 100vw - 1000px) / 200 ) );
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    --space-10:275.716983698px;
   }
 }
 
