@@ -570,123 +570,33 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: 39.9854px;
+  font-size: 4;
   line-height: 1;
-}
-@media (min-width: 500px) and (max-width: 1000px) {
-  h1, .h1 {
-    font-size: calc( 39.9854px + 5.7122 * ( ( 100vw - 500px) / 500 ) );
-  }
-}
-@media (min-width: 1000px) and (max-width: 1200px) {
-  h1, .h1 {
-    font-size: calc( 45.6976px + 11.4244 * ( ( 100vw - 1000px) / 200 ) );
-  }
-}
-@media (min-width: 1200px) {
-  h1, .h1 {
-    font-size: 57.122px;
-  }
 }
 
 h2, .h2 {
-  font-size: 30.758px;
+  font-size: 3;
   line-height: 1;
-}
-@media (min-width: 500px) and (max-width: 1000px) {
-  h2, .h2 {
-    font-size: calc( 30.758px + 4.394 * ( ( 100vw - 500px) / 500 ) );
-  }
-}
-@media (min-width: 1000px) and (max-width: 1200px) {
-  h2, .h2 {
-    font-size: calc( 35.152px + 8.788 * ( ( 100vw - 1000px) / 200 ) );
-  }
-}
-@media (min-width: 1200px) {
-  h2, .h2 {
-    font-size: 43.94px;
-  }
 }
 
 h3, .h3 {
-  font-size: 23.66px;
+  font-size: 2;
   line-height: 1;
-}
-@media (min-width: 500px) and (max-width: 1000px) {
-  h3, .h3 {
-    font-size: calc( 23.66px + 3.38 * ( ( 100vw - 500px) / 500 ) );
-  }
-}
-@media (min-width: 1000px) and (max-width: 1200px) {
-  h3, .h3 {
-    font-size: calc( 27.04px + 6.76 * ( ( 100vw - 1000px) / 200 ) );
-  }
-}
-@media (min-width: 1200px) {
-  h3, .h3 {
-    font-size: 33.8px;
-  }
 }
 
 h4, .h4 {
-  font-size: 18.2px;
+  font-size: 1;
   line-height: 1;
-}
-@media (min-width: 500px) and (max-width: 1000px) {
-  h4, .h4 {
-    font-size: calc( 18.2px + 2.6 * ( ( 100vw - 500px) / 500 ) );
-  }
-}
-@media (min-width: 1000px) and (max-width: 1200px) {
-  h4, .h4 {
-    font-size: calc( 20.8px + 5.2 * ( ( 100vw - 1000px) / 200 ) );
-  }
-}
-@media (min-width: 1200px) {
-  h4, .h4 {
-    font-size: 26px;
-  }
 }
 
 h5, .h5 {
-  font-size: 14px;
+  font-size: 0;
   line-height: 1;
-}
-@media (min-width: 500px) and (max-width: 1000px) {
-  h5, .h5 {
-    font-size: calc( 14px + 2 * ( ( 100vw - 500px) / 500 ) );
-  }
-}
-@media (min-width: 1000px) and (max-width: 1200px) {
-  h5, .h5 {
-    font-size: calc( 16px + 4 * ( ( 100vw - 1000px) / 200 ) );
-  }
-}
-@media (min-width: 1200px) {
-  h5, .h5 {
-    font-size: 20px;
-  }
 }
 
 h6, .h6 {
-  font-size: 14px;
+  font-size: 0;
   line-height: 1;
-}
-@media (min-width: 500px) and (max-width: 1000px) {
-  h6, .h6 {
-    font-size: calc( 14px + 2 * ( ( 100vw - 500px) / 500 ) );
-  }
-}
-@media (min-width: 1000px) and (max-width: 1200px) {
-  h6, .h6 {
-    font-size: calc( 16px + 4 * ( ( 100vw - 1000px) / 200 ) );
-  }
-}
-@media (min-width: 1200px) {
-  h6, .h6 {
-    font-size: 20px;
-  }
 }
 
 /**
