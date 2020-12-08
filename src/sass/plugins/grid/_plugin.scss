@@ -73,9 +73,6 @@ $grid-offpart-sizes: (
   flex: 1 1 auto; /* Default for IE10 bug */
   padding-left: $horizontal;
   padding-bottom: $vertical;
-  &:last-child {
-    padding-bottom: 0;
-  }
 }
 
 .flex {
