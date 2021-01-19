@@ -6,46 +6,48 @@ $h3-font-size: 2 !default;
 $h4-font-size: 1 !default;
 $h5-font-size: 0 !default;
 $h6-font-size: 0 !default;
-$heading-color: $black !default;
-$heading-padding-top: $spacing-less !default;
+$heading-color: #000 !default;
+$heading-padding-top: var(--spacing-less) !default;
 $heading-padding-bottom: 0 !default;
-$heading-margin-bottom: $spacing-less !default;
+$heading-margin-bottom: var(--spacing-less) !default;
 $heading-line-height: 1 !default;
+$heading-font: 'Arial', sans-serif !default;
 
 %heading {
   color: $heading-color;
   padding-top: $heading-padding-top;
   padding-bottom: $heading-padding-bottom;
   margin-bottom: $heading-margin-bottom;
+  font-family: $heading-font;
 }
 
 %h1 {
-  @include mod(font-size, $h1-font-size);
+  font-size:  $h1-font-size;
   line-height: $heading-line-height;
 }
 
 %h2 {
-  @include mod(font-size, $h2-font-size);
+  font-size:  $h2-font-size;
   line-height: $heading-line-height;
 }
 
 %h3 {
-  @include mod(font-size, $h3-font-size);
+  font-size:  $h3-font-size;
   line-height: $heading-line-height;
 }
 
 %h4 {
-  @include mod(font-size, $h4-font-size);
+  font-size:  $h4-font-size;
   line-height: $heading-line-height;
 }
 
 %h5 {
-  @include mod(font-size, $h5-font-size);
+  font-size:  $h5-font-size;
   line-height: $heading-line-height;
 }
 
 %h6 {
-  @include mod(font-size, $h6-font-size);
+  font-size:  $h6-font-size;
   line-height: $heading-line-height;
 }
 

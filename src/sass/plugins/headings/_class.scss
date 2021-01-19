@@ -4,12 +4,12 @@
 @use '../config' as *;
 @use '../modularscale/index' as *;
 
-$h1-font-size: 4 !default;
-$h2-font-size: 3 !default;
-$h3-font-size: 2 !default;
-$h4-font-size: 1 !default;
-$h5-font-size: 0 !default;
-$h6-font-size: 0 !default;
+$h1-font-size: var(--space-6) !default;
+$h2-font-size: var(--space-5) !default;
+$h3-font-size: var(--space-4) !default;
+$h4-font-size: var(--space-3) !default;
+$h5-font-size: var(--space-2) !default;
+$h6-font-size: var(--space-1) !default;
 $heading-color: $black !default;
 $heading-padding-top: $spacing-less !default;
 $heading-padding-bottom: 0 !default;
